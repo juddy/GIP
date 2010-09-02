@@ -1,0 +1,40 @@
+Instllation of phpCodeGenie
+More details on installation can be found at http://phpcodegenie.sourceforge.net/installation.php
+
+********
+Step 1 : Unpack the tarball or zip file that you download to a directory viewable by your web server
+
+     Windows System 
+          C:\path\unzip phpCodeGenie.zip 
+
+     *nix System
+          % tar -xzvf phpCodeGenie.tar.gz
+
+********
+Step 2 : Make the genie Configuration file viewable to all files in your PCG application 
+
+     There are two ways to do that
+
+        Solution 1 : In your unpacked phpCodeGenie directory, there is an .htaccess file in the root. Edit that file and change the path to point to the app/settings folder of your phpCodeGenie application. That will make all files in the settings directory viewable by all files in PCG.
+
+        if Solution 1 is not enabled on your server (.htaccess not enabled)
+
+        Solution 2 : Copy the app/settings/genieConfiguration.inc.php to your phpInclude directory. That would make it viewable to any application on your server though.
+
+
+********
+Step 3 : Edit the genieConfiguration.inc.php file to reflect your server settings. 
+
+        If Solution 1 from above was used, then edit the genieConfiguration.inc.php file in the app/settings folder or if Solution 2 was used, then edit the genieConfiguration.inc.php file in your php Include directory.
+
+********
+Step 4 : Change the GeneratedCode Directory to writeable by the WebServer
+
+        *nix systems
+        % chmod -R 777 web/generatedCode/
+
+        Windows Systems
+        Right click on properties of the web/generatedCode folder and make sure the Read Only is not checked.
+
+********
+Step 5 : Point your browser to phpCodeGenie and you are ready to go.

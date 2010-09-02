@@ -1,0 +1,447 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+
+<html>
+<head>
+	<title>Form Validation Wizard 2.0</title>
+<Style>
+BODY, P,TD{ font-family: Arial,Verdana,Helvetica, sans-serif; font-size: 10pt }
+H1{ font-family: Arial,Verdana,Helvetica, sans-serif; font-size: 18pt }
+H2{ font-family: Arial,Verdana,Helvetica, sans-serif; font-size: 12pt }
+A{font-family: Arial,Verdana,Helvetica, sans-serif;}
+CODE {font-family : Courier,monospace;font-size: 10pt;color : #800000;}
+CODE.htm {font-family : "Courier New", Courier, monospace;	font-size : x-small;	color : #000080;}
+</Style>
+</head>
+
+<body>
+<center>
+<table cellspacing="2" cellpadding="2" border="0" width="760">
+<tr><td>
+	<A name="top"></A>
+	<H1>Form Validation Wizard 2.0</H1>
+	<h4>Documentation</h4>
+	<center>
+	<table cellspacing="0" cellpadding="2" border="1" bordercolor="#800000" width="580">
+	<tr><td bgColor="#FFFFE1">	
+		Form Validation Wizard is a Freeware From 
+		<B>CreativeProgrammers.com <BR>
+		which turns your Programming Expertise into Achievements!</B><BR>
+		CreativeProgrammers.com is the knowledge sharing community for software 
+		developers. Those who <a href="http://www.creativeprogrammers.com/public/signup.php">sign-up now</a> will get 
+		an EMail Course absolutely free!<BR>
+	</td></tr>
+	</table>	
+</td></tr>
+<tr><td>
+<h2>Index</h2>
+<A href="#1">1 Introduction</A><br>
+<A href="#2">2 Steps</A><br>
+<A href="#3">3 Example</A><br>
+<A href="#4">4 Things to remember</A><br>
+<A href="#5">5 Adding Custom Validation<</A><br>
+<A href="#6">6 Clear All Validations</A><br>
+<A href="#7">5 Table of Validation Descriptors</A><br>
+<A href="#8">8 Example Page</A><br><br>
+<br>
+		Please Email suggestions/bugs to <A href="mailto: form.validation@creativeprogrammers.com"
+		>form.validation@creativeprogrammers.com</A>
+		<BR><BR>
+		Want to learn more about HTML Forms ? 
+		Read  <A href="http://www.creativeprogrammers.com/article/rd.php/html-form-tutorial-13-1.html"
+		>HTML Form Tutorial</A> !<BR>
+		Not so confident on JavaScript programming ?
+		Go through 
+		<A href="http://www.creativeprogrammers.com/article/rd.php/javascript-tutorial-12-1.html"
+		>JavaScript Tutorial</A> !!<BR>
+		<HR size=1 color="#888888">
+</td></tr>
+</table>
+</center>
+<center>
+<table cellspacing="2" cellpadding="2" border="0" width="760">
+<tr>
+<td width="580">	
+    <a name="1"></a>
+	<h4>1. Introduction</h4>
+	<P>
+	Using client side JavaScript is an efficient way to validate the user input 
+	in web applications. When there are many fields in the form, the JavaScript 
+	validation becomes too complex.
+	</P> 
+	<P>
+    The JavaScript class presented here makes the form validations many times easier.
+	</P>
+	<P>
+	The idea is to create a set of "validation descriptors" associated with each element 
+	in a form. The "validation descriptor" is nothing but a string specifying the type of 
+	validation to be performed.
+	</P>
+	<P>
+	Each field in the form can have 0, 1, or more validations. For example, the input should 
+	not be empty, should be less than 25 chars, should be alpha-numeric, etc
+	</P>
+	You can associate a set of validation descriptors for each input field in the form.
+	<a name="2"></a>
+	<h4>2. Steps</h4>
+	1.Include gen_validatorv2.js in your html file just before closing the HEAD tag<br><br>
+	
+	<CODE>
+	 &lt;script language="JavaScript" src="gen_validatorv2.js" type="text/javascript"&gt;&lt;/script&gt;<BR>
+	 &lt;/head&gt;<BR>
+	</CODE><br>
+	
+	2. Just after defining your form,
+	Create a form validator object passing the name of the form<br><br>
+	
+	<CODE class='htm'>
+	&nbsp;&lt;FORM name='myform' action=""&gt;<BR>
+	&nbsp;&lt;!----Your input fields go here --&gt;<BR>
+	&nbsp;&lt;/FORM&gt;<BR>
+	</CODE><CODE>
+	&nbsp;&lt;SCRIPT language="JavaScript"&gt;<BR>
+	&nbsp;var frmvalidator &nbsp;= new Validator("myform");<BR>
+	.... 
+	</CODE>
+	<br>
+	<br>
+	
+	3. Now add the validations required<br><br>
+	
+	<CODE>
+		frmvalidator.addValidation("FirstName","alpha");
+	</CODE><br><br>
+	
+	
+	the first argument is the name of the field and the second argument is the 
+	validation descriptor, which specifies the type of validation to be performed.<br>
+	You can add any number of validations.The list of validation descriptors are provided 
+	at the end of the documentation.<br>
+	The optional third argument is the error string to be displayed if the validation 
+	fails.<br>
+	<br>
+	<CODE>
+		frmvalidator.addValidation("FirstName","alpha");<br>
+		frmvalidator.addValidation("FirstName","req","Please enter your First Name");<br>
+		frmvalidator.addValidation("FirstName","maxlen=20",<br>
+			"Max length for FirstName is 20");		<br>
+	</CODE>	<br>
+	<br>
+	4. Similarly, add validations for the fields where validation is required.<br>
+	Thats it! You are ready to go.
+	<A name="3"></A>
+	<h4>3. Example</h4>
+	The example below will make the idea clearer<br>
+	<CODE class="htm">
+			&lt;form action="" name="myform" &gt;<BR>
+			&lt;table cellspacing="2" cellpadding="2" border="0"&gt;<BR>
+			&lt;tr&gt;<BR>
+			&nbsp;&nbsp;&lt;td align="right"&gt;First Name&lt;/td&gt;<BR>
+			&nbsp;&nbsp;&lt;td&gt;&lt;input type="text" name="FirstName"&gt;&lt;/td&gt;<BR>
+			&lt;/tr&gt;<BR>
+			&lt;tr&gt;<BR>
+			&nbsp;&nbsp;&lt;td align="right"&gt;Last Name&lt;/td&gt;<BR>
+			&nbsp;&nbsp;&lt;td&gt;&lt;input type="text" name="LastName"&gt;&lt;/td&gt;<BR>
+			&lt;/tr&gt;<BR>
+			&lt;tr&gt;<BR>
+			&nbsp;&nbsp;&lt;td align="right"&gt;EMail&lt;/td&gt;<BR>
+			&nbsp;&nbsp;&lt;td&gt;&lt;input type="text" name="Email"&gt;&lt;/td&gt;<BR>
+			&lt;/tr&gt;<BR>
+			&lt;tr&gt;<BR>
+			&nbsp;&nbsp;&lt;td align="right"&gt;Phone&lt;/td&gt;<BR>
+			&nbsp;&nbsp;&lt;td&gt;&lt;input type="text" name="Phone"&gt;&lt;/td&gt;<BR>
+			&lt;/tr&gt;<BR>
+			&lt;tr&gt;<BR>
+			&nbsp;&nbsp;&lt;td align="right"&gt;Address&lt;/td&gt;<BR>
+			&nbsp;&nbsp;&lt;td&gt;&lt;textarea cols="20" rows="5" name="Address"&gt;&lt;/textarea&gt;&lt;/td&gt;<BR>
+			&lt;/tr&gt;<BR>
+			&lt;tr&gt;<BR>
+			&nbsp;&nbsp;&lt;td align="right"&gt;Country&lt;/td&gt;<BR>
+			&nbsp;&nbsp;&lt;td&gt;<BR>
+				&nbsp; &lt;SELECT name="Country"&gt;<BR>
+					&lt;option value="" selected&gt;[choose yours]<BR>
+					&lt;option value="008"&gt;Albania<BR>
+					&lt;option value="012"&gt;Algeria<BR>
+					&lt;option value="016"&gt;American Samoa<BR>
+					&lt;option value="020"&gt;Andorra<BR>
+					&lt;option value="024"&gt;Angola<BR>
+					&lt;option value="660"&gt;Anguilla<BR>
+					&lt;option value="010"&gt;Antarctica<BR>
+					&lt;option value="028"&gt;Antigua And Barbuda<BR>
+					&lt;option value="032"&gt;Argentina<BR>
+					&lt;option value="051"&gt;Armenia<BR>
+					&lt;option value="533"&gt;Aruba	<BR>
+				&nbsp;&lt;/SELECT&gt;<BR>
+				&lt;/td&gt;<BR>
+			&lt;/tr&gt;<BR>
+			&lt;tr&gt;<BR>
+			&nbsp;&nbsp;&lt;td align="right"&gt;&lt;/td&gt;<BR>
+			&nbsp;&nbsp;&lt;td&gt;&lt;input type="submit" value="Submit"&gt;&lt;/td&gt;<BR>
+			&lt;/tr&gt;<BR>
+			&lt;/table&gt;<BR>
+			&lt;/form&gt;<BR>
+			</CODE><CODE>
+			&lt;script language="JavaScript" type="text/javascript"&gt;<BR>
+			&nbsp;var frmvalidator&nbsp;= new Validator("myform");<BR>
+			&nbsp;frmvalidator.addValidation("FirstName","req","Please enter your First Name");<BR>
+			&nbsp;frmvalidator.addValidation("FirstName","maxlen=20",<BR>
+				"Max length for FirstName is 20");<BR>
+			&nbsp;frmvalidator.addValidation("FirstName","alpha");<BR>
+			&nbsp;<BR>
+			&nbsp;frmvalidator.addValidation("LastName","req");<BR>
+			&nbsp;frmvalidator.addValidation("LastName","maxlen=20");<BR>
+			&nbsp;<BR>
+			&nbsp;frmvalidator.addValidation("Email","maxlen=50");<BR>
+			&nbsp;frmvalidator.addValidation("Email","req");<BR>
+			&nbsp;frmvalidator.addValidation("Email","email");<BR>
+			&nbsp;<BR>
+			&nbsp;frmvalidator.addValidation("Phone","maxlen=50");<BR>
+			&nbsp;frmvalidator.addValidation("Phone","numeric");<BR>
+			&nbsp;<BR>
+			&nbsp;frmvalidator.addValidation("Address","maxlen=50");<BR>
+			&nbsp;frmvalidator.addValidation("Country","dontselect=0");<BR>
+			&lt;/script&gt;<BR>	
+	</CODE>
+	<A name="4"></A>
+	<h4>4. Things to remember</h4>
+	<LI type="disc">The form validators should be created only after defining the HTML form
+	(only after the &lt;/form&gt; tag. )<br>
+	<LI type="disc">Your form should have a distinguished name. 
+	If there are more than one form 
+	in the same page, you can add validators for each of them. The names of the
+	forms and the validators should not clash.
+	<LI type="disc">You can't use the javascript onsubmit event of the form if it you are 
+	using this validator script. It is because the validator script automatically overrides the
+	onsubmit event. If you want to add a custom validation, see the section below
+	</LI>
+	<A name="5"></A>
+	<h4>5. Adding Custom Validation</h4>
+	If you want to add a custom validation, which is not provided by the validation descriptors,
+	you can do so. Here are the steps:
+	
+	<LI type="disc">Create a javascript function which returns true or false depending on the validation.<br>
+	
+	<CODE>
+		function DoCustomValidation()<BR>
+		{<BR>
+		&nbsp;&nbsp;var frm = document.forms["myform"];<BR>
+		&nbsp;&nbsp;if(frm.pwd1.value != frm.pwd2.value)<BR>
+		&nbsp;&nbsp;{<BR>
+		&nbsp;&nbsp;&nbsp;&nbsp;alert('The Password and verified password don not match!');<BR>
+		&nbsp;&nbsp;&nbsp;&nbsp;return false;<BR>
+		&nbsp;&nbsp;}<BR>
+		&nbsp;&nbsp;else<BR>
+		&nbsp;&nbsp;{<BR>
+		&nbsp;&nbsp;&nbsp;&nbsp;return true;<BR>
+		&nbsp;&nbsp;}<BR>
+		}<BR>
+	</CODE><br>
+	
+	<LI type="disc">Associate the validation function with the validator object.<br>
+	<CODE>
+	frmvalidator.setAddnlValidationFunction("DoCustomValidation"); 
+	</CODE><br>
+	</LI>
+	The custom validation function will be called automatically after other validations.
+	<A name="6"></A>
+	<h4>6. Clear All Validations</h4>
+	In some dynamically programmed pages, it may be required to change the validations in the
+	form at run time. For such cases, a function is included which clears all validations in the 
+	validator object.<br><br>
+	
+	<CODE>
+	frmvalidator.clearAllValidations(); 
+	</CODE><br>
+	<br>
+	
+	this function call clears all validations you set.<br>
+	You will not need this method in most cases.
+
+	<a name="7"></a>
+	<h4>7. Table of Validation Descriptors</h4>	
+	
+     <table cellspacing="2" cellpadding="2" border="1" width="520px">
+      <tr>
+          <td><FONT face=Arial size=2>
+      	required<BR>
+      	req </FONT>
+      	</td>
+          <td><FONT face=Arial size=2>The field should not be 
+            empty </FONT>
+      	</td>
+      </tr>
+      <tr>
+          <td><FONT face=Arial size=2>
+      	maxlen=???<BR>
+      	maxlength=??? 
+      	</td>
+          <td><FONT face=Arial size=2>checks the length entered data to the maximum. For 
+            example, if the maximum size permitted is 25, give the validation descriptor as "maxlen=25" 
+      	</td>
+      </tr>
+      <tr>
+          <td><FONT face=Arial size=2>
+      	minlen=???<BR>
+      	minlength=??? 
+      	</td>
+          <td><FONT face=Arial size=2>checks the length of the entered string to the 
+            required minimum. example "minlen=5"
+      	</td>
+      </tr>
+      <tr>
+          <td><FONT face=Arial size=2>
+      	alphanumeric /<BR>
+      	alnum </FONT>
+      	</td>
+          <td><FONT face=Arial size=2>Check the data if it 
+            contains any other characters other than alphabetic or numeric characters 
+            </FONT>
+      	</td>
+      </tr>	  
+      <tr>
+          <td><FONT face=Arial size=2>num <BR>
+      	numeric </FONT>
+      	</td>
+          <td><FONT face=Arial size=2>Check numeric data 
+          </FONT>
+      	</td>
+      </tr>
+      <tr>
+          <td><FONT face=Arial size=2>alpha <BR>
+      	alphabetic </FONT>
+      	</td>
+          <td><FONT face=Arial size=2>Check alphabetic data. 
+            </FONT>
+      	</td>
+      </tr>	  
+      <tr>
+          <td><FONT face=Arial size=2>email </FONT>
+      	</td>
+          <td><FONT face=Arial size=2>The field is an email 
+            field and verify the validity of the data. </FONT>
+      	</td>
+      </tr>
+      <tr>
+          <td><FONT face=Arial size=2>lt=???<BR>
+      	lessthan=??? 
+      	</td>
+          <td><FONT face=Arial size=2>
+      	Verify the data to be less than the value passed.
+      	Valid only for numeric fields. <BR>
+      	example: if the 
+            value should be less than 1000 give validation description as "lt=1000"
+      	</td>
+      </tr>
+      <tr>
+          <td><FONT face=Arial size=2>gt=???<BR>
+      	greaterthan=???	</td>
+          <td><FONT face=Arial size=2>
+      	Verify the data to be greater than the value passed.
+      	Valid only for numeric fields. <BR>
+      	example: if the 
+            value should be greater than 10 give validation description as "gt=10" 
+      	</td>
+      </tr>
+      <tr>
+          <td><FONT face=Arial size=2>regexp=??? </FONT>
+      	</td>
+          <td><FONT face=Arial size=2>
+      	 Check with a regular expression the value should match the regular expression.<BR>
+      	 example: "regexp=^[A-Za-z]{1,20}$" allow up to 20 alphabetic 
+       	 characters.      
+      	</td>
+      </tr>
+      <tr>
+          <td><FONT face=Arial size=2>dontselect=?? </FONT>
+      	</td>
+          <td><FONT face=Arial size=2>This 
+            validation descriptor is valid only for select input items (lists) 
+            Normally, the select list boxes will have one item saying 'Select One' or 
+            some thing like that. The user should select an option other than this 
+            option. If the index of this option is 0, the validation description 
+            should be "dontselect=0"
+      	</td>
+      </tr>
+      </table>
+	  <A name="8"></A>
+	 <h4>8. Example Page</h4>	
+	 See the example Page <a href="example.html">here</a>
+</td>
+<td width="180" bgcolor="#E1FFFF" vAlign="top">
+		<table cellspacing="2" cellpadding="2" border="0" width="100%" height="2800">
+		<tr>
+		    <td >
+				<table cellspacing="0" cellpadding="2" border="1" width="95%">
+				<tr><td bgColor="#FFFFE1">
+					<SCRIPT src="gen_validation.js" language="JavaScript">
+					</SCRIPT>
+					<SCRIPT  language="JavaScript">
+					   var arrFormValidation=[
+						   [//First Name
+						     ["required","Please Enter your First Name"],
+							 ["maxlen=100","First Name too Big"],
+							 ["minlen=3","First Name too Small?"]
+						   ],
+						   [//Email
+						     ["required","Please enter a valid email address"],
+							 ["maxlen=125","Email address too Big"],
+							 ["email","Please enter a valid email address"]
+						   ]
+					   ];
+					 </SCRIPT> 				
+				     <B>Join the CreativeProgrammers' Javascript Tools Mailing List</B>
+					 and get informed on new releases!
+					 <form action="http://www.creativeprogrammers.com/download/java-script/free/addtoflist.php"
+					  method='post'	  onsubmit="return validateForm(this,arrFormValidation)">
+					 <table clellspacing="2" cellpadding="2">
+					 <tr>
+					  <td><font face='Arial' size=2>First Name:</font></td>
+						<td><input type="text" name="name" size=15></td>
+					 </tr>
+					 <tr>
+					   <td><font face='Arial' size=2>Email</font></td>
+					   <td><input type="text" name="email" size=15></td>
+					 </tr>
+					 <tr>
+					   <td></td>
+					   <td><input type="submit" name="submit" value='Submit'></td>
+					 </tr> 
+					 <tr>
+					   <td colspan="2"><font face='Verdana' size=1>Your Personal information is
+					   Safe and secure with CreativeProgrammers.com. Please see the 
+					   <a href="http://www.creativeprogrammers.com/docs/privacy.html" target="_blank">Privacy Policy</A> </font></td>
+					   <td></td>
+					 </tr> 			 
+					 </table>
+					 </form>					
+				</td></tr>
+				</table>
+			</td>
+		</tr>						
+		<tr>
+		    <td >
+				<table cellspacing="0" cellpadding="2" border="1" width="170">
+				<tr>
+				    <td bgColor="#FFFFE1"><font face="Arial" size=2>
+					    <B>FREE Ebook</B><BR>
+						<B>H</B>ere is the book that shows you how to become a high-earning affiliate champion.
+						The ultimate guide that takes you step by step, leading you to make a regular 
+						income from your website. A Highly recommended resource.
+						</font><CENTER>
+					<img src="http://www.creativeprogrammers.com/banners/affmaster3Dcover105x155.jpg" width="105" height="155" border="0" alt="Become a High Earning Affiliate Champion!">
+					</CENTER>
+					<br><B>
+				       <A href="http://www.creativeprogrammers.com/download/AffMasters.zip">
+					Download it Now for FREE!</A></B> 	
+					</font>
+					</td>
+				</tr>
+				</table>
+			</td>
+		</tr>
+		</table>
+</td>
+</tr>
+</table>	
+</center>
+</body>
+</html>

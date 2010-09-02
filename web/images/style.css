@@ -1,0 +1,125 @@
+BODY {
+  font-family: Verdana, Arial, Helvetica, sans-serif;
+  font-size: 11px;
+  color: #000000;
+  line-height: 18px;
+}
+
+TD {
+  font-family: Verdana, Arial, Helvetica, sans-serif;
+  font-size: 11px;
+  color: #000000;
+    line-height: 18px;
+  }
+
+.miniText {
+  font-family: Verdana, Arial, Helvetica, sans-serif;
+  font-size: 9px;
+  color: #1d2eb1;
+  }  
+  
+
+li {
+  font-family: Verdana, Arial, Helvetica, sans-serif;
+  font-size: 11px;
+  color: #000000;
+   line-height: 14px;
+}
+
+.chosen {
+  font-family: Verdana, Arial, Helvetica, sans-serif;
+  font-size: 12px;
+  color: #1b06a1;
+  font-weight: bolder;
+}
+
+ul {
+  font-family: Verdana, Arial, Helvetica, sans-serif;
+  font-size: 11px;
+  color: #000000;
+    line-height: 12px;
+}
+
+code {
+    line-height: 14px;
+}
+
+.header {
+  font-family: Verdana, Arial, Helvetica, sans-serif;
+  font-size: 15px;
+  color: #CC0033;
+  font-weight: bolder;
+  line-height: 2
+}
+
+.genChooserLink {
+  font-family: Verdana, Arial, Helvetica, sans-serif;
+  font-size: 11px;
+  font-variant: small-caps;
+  color: #000000;
+  font-weight: bolder;
+}
+
+h1 {
+  font-family: Verdana, Arial, Helvetica, sans-serif;
+  font-size: 17px;
+  color: #d26623;
+  font-weight: bold;
+}
+
+h2 {
+  font-family: Verdana, Arial, Helvetica, sans-serif;
+  font-size: 16px;
+  color: #d26623;
+}
+
+h3 {
+  font-family: Verdana, Arial, Helvetica, sans-serif;
+  font-size: 14px;
+  color: #d26623;
+  font-weight: bolder;
+}
+
+h4, .dbName {
+  font-family: Verdana, Arial, Helvetica, sans-serif;
+  font-size: 12px;
+  color: #d26623;
+  font-weight: bolder;
+}
+
+h5 {
+  font-family: Verdana, Arial, Helvetica, sans-serif;
+  font-size: 12px;
+  color: #d26623;
+  font-weight: 100;
+}
+
+h6 {
+  font-family: Verdana, Arial, Helvetica, sans-serif;
+  font-size: 10px;
+  color: #CCCCCC;
+}
+
+a:link {
+  color: #1d2eb1;
+}
+
+a:visited {
+  color: #1d2eb1;
+ }
+
+a:hover {
+  color: #068d09;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+a:active {
+  color: #202dbf;
+  font-weight: bolder;
+  text-decoration: none;
+}
+
+.red {
+  color: #CC0000;
+}
