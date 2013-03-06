@@ -31,7 +31,7 @@ list-style-image: url(<? echo URL_IMAGE_FOLDER; ?>/arrow.gif);}
 
 
 
-<body background="<? echo URL_IMAGE_FOLDER; ?>/gradhor.gif" >
+<body background="<? echo URL_IMAGE_FOLDER; ?>/linen.png" >
 
 <?
 

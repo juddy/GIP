@@ -7,7 +7,7 @@ include_once(CLASS_FILESYSTEM_UTILS);
 include_once(CLASS_TABLE);
 include_once(CLASS_PLUGIN_LOADER);
 include_once(CLASS_COMMON_OBJECT_COPIER);
-include_once(CLASS_PHP_GENIE_UTILS_COMMON_FILE_COPIER);
+include_once(CLASS_PHP_GIP_UTILS_COMMON_FILE_COPIER);
 
 $thisPlugInLoader = new plugInLoader();
 $thisCommonFileCopier = new gipCommonFileCopier();

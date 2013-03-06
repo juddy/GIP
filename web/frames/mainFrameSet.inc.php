@@ -1,7 +1,5 @@
-<frameset rows="45,*" cols="*" frameborder="yes" bordercolor="#FFFFFF">
-
+<frameset rows="64,*" cols="*" frameborder="yes" bordercolor="#FFFFFF">
   <frame name="topFrame" src="<? echo PAGE_FRAME_TOP_BAR; ?>" scrolling="NO" noresize >
-  
   <frameset cols="400,*" frameborder="yes">
     <frame name="leftnav" src="<? echo PAGE_FRAME_LEFT_BAR; ?>"  frameborder="yes" />
     <frameset rows="32,*" cols="*" frameborder="no">

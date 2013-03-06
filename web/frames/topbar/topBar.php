@@ -12,8 +12,7 @@ include("//var/www/gip/app/settings/gipConfiguration.inc.php");
 </a>
 </td>
 <td valign=top>
- <b><a href="<? echo PAGE_GITHUB_PROJECT_HOMEPAGE_URL; ?>" target="mainWindow"><? echo strtoupper(APPLICATION_NAME); ?> v<? echo APPLICATION_VERSION; ?></a></b>
- <br>(<a href="<? echo PAGE_AUTHOR_BIO; ?>" target="mainWindow"><font color=red><? echo LANG_BASIC_BY; ?><b> W.J. Kennedy</b></font></a>)
+ <b><a href="<? echo PAGE_GITHUB_PROJECT_HOMEPAGE_URL; ?>" target="blank"><? echo strtoupper(APPLICATION_NAME); ?> v<? echo APPLICATION_VERSION; ?></a></b>
 </td>
 </tr>
 </table>
