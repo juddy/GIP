@@ -1,0 +1,56 @@
+PCG Framework 
+
+PCG Framework aims at building object oriented php applicaitons which are portable and scalable.
+
+Every table that we are going to use in our application will have 5 classes directly associated with them which will be generarted by PCG. For example for table called user, we will have userInfo, userGenDao, userGenManager, userManager and userDao. 
+
+Info Classes
+Info classes are classes that map the fields in a table. Each table in your database will have a corresponding Info class and each field in your table will be represented in that Info class by a variable. For each of the latter, there are getter and setter methods defined. Fields should only be accessed via their respective getters and setters. The info classes are basically data containers. Their sole role is to carry data around our PCG application. They do not have any business logic built in the classes.  The naming convention for the Info classes are 'tableName'Info.  This class should NOT be manually changed, as it is intented to be regenerated if your table structure changes.
+
+GenDAO and DAO Classes
+A DAO is a Data Access Objects. The GenDAO and DAO classes do exactly that. They access data.  The DAO class extends the GenDAO class. The GenDAO class's role is to communicate with any data sources that the applicaiton may need to talk to and send to or retreive data from the latter.  PCG will generate a GenDao code that will send and retreive data from a database. if you want to change the implementation of how it retrieves data or from which source it retrieve it (e.g flat file, a web service, or any other kind of data source), you can override all the methods of the GenDAO in the DAO subclass. The application will only be instantiating new DAO classes. So whatever you override in DAO will be used. Also the DAO class is the class where you will put custom DAO methods not available in the generated Code. If you do a regeneration, you can always overwrite the GenDAO, keeping your customizations in DAO. 
+
+The GENDAO should NOT be manually changed, as it is intented to be regenerated if your table structure changes. Put all your custom methods in the DAO Class.
+
+GenManager and Manager Classes
+The GenManager and Manager classes are a facade layer to interact with the DAO. objects.  All the front end pages interact only with the Manager which then talks to whichever implementation of DAO it needs to talk to. Having this facade, the front end pages will never need to be touched in case we want to change our DAO implementation or use a third party DAO. The front end methods will call the same method names as they called before from the Manager classes and we just need to change these methods in the Manager class to talk to different objects. The GenManager class contains all basic CRUD operations. If you want to add custom methods, please add them in the Manager class. You can overide any of the methods in the GenManager class by rewriting them in the Manager subclass. The front end should only instantiate new instances of the Manager class. So whatever you overide in the latter will be used.
+
+The GenManager class should NOT be manually changed, as it is intented to be regenerated if your table structure changes. Put all your custom methods in the Manager Class.
+
+--
+Constants File
+
+Define being global in php applications can be used throughout a PCG application, in functions, classes and pages, without any problems.
+
+Db.conf.php
+
+
+Class Constants
+
+As php does not have a package or import mechanisms, one has to import any classes one uses by specifying the path to these class code. If the paths are hardcoded, this causes many dependencies on the system being used. It should be easy to move an application from system to system easily.  So in the class constants, we define every class path being used in the application by using their full path, the root_path being 
+
+Database Constants 
+
+The DatabaseConstants file is a file mapping all tables that are being used in the application and the fields they contain to defined constants in the application. The constants follow a strict naming convention. All tables are called . TABLE_tableName and fields are called FIELD_tableName_fieldName. The primary key for each table is also defined and is called FIELD_tableName_PK. For each Field, there is also another constant defined which is prefixed by LABEL_. This constant would be in this form LABEL_tableName_fieldName and is used to store a more descriptive name for that particular field, i.e the text that you want the user to see. Often times, what you name a field name in the database is not exactly what you want your users to see. So the LABEL constant is used mostly for the User Interface and makes it very easy to change the user interface field display text. Also might be useful for localization of fieldNames.
+
+Application Constants
+
+
+WebConstants
+
+
+PageConstants
+
+
+
+WebIncludes
+
+--
+
+SearchUtils
+
+SearchItems
+
+
+- 
+DatabaseQuery

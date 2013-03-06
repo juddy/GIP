@@ -1,0 +1,75 @@
+ChangeLog
+-------------
+Version 3.0.2 --> 3.0.3
+10/21/2004 - Added new PDF documentation for Introduction to the PCG Framework
+             Added tool to Translate PCG user Interface and save new language File
+10/18/2004 - César Guirao Robles reported a security risk in PCG simple application generation. If users put arbitrary code in the headers and footers, they can execute these code by going to the web/generatedCode/simple/applicationName            
+             Although PCG is an application used for developers and as such should not be put on production or public machine, I decided to remove the custom header and footer textbox from the full simple applicaiton generation to prevent this
+10/15/2004 - Fixed XML Output filter.. it had a bug which would not cause the data not to show up
+   
+-------------
+Version 3.0.1 --> 3.0.2
+
+10/12/2004 - XMLOutput Filter had an error. Removed the limits on data retreival from it.
+             In generated Code applicationConstants, added a constant ALLOW_HTML_TAGS_IN_POST_GET_REQUESTS, to know whether to allow html and other tags in form input (requests)
+
+
+10/13/2004 - In searchTable DAO, if result not found, return empty Results Info instead of false (to be more consistent with the returns)
+
+--------------
+Version 3.0 Alpha --> 3.0Beta
+08/12/2004 - In genieConfigurationFileGenerator Plugin.. added quotes around constants being defined.
+                                                         If file separator == \ add \\
+                                                         Check user info from session to build config file or from settings file
+             Changed geniePopulateInfo plugin to remove the pass info by reference.. to return a copy of info instead
+             Changed genieSearchDaoGenerator to call populateDao and getting back an info instead of by reference                                             
+         
+	     
+08/13/2004 - Fixed all the bugs submitted to sourceforge.net
+             Added Nonsense Generator in utilities section to generate cool filler text for webpages
+
+08/20/2004 - removed strtolower from generated filenames to match exact case of tableName
+             removed strtolower in field name in commonsimplegenerator for get id from lister
+             added addslashes in userPlugIns in saveOracleComments to avoid sql errors
+
+08/21/2004 - added link to go back to list all records in generated simple update script
+             changed list all generared code for PCG framework generator to look better
+             changed style sheet and added tableLess layout to pages
+             changed default headers and footers 
+             changed look and feel for generated PCG edit form
+             in list all web pcg code.. added code to check if no rows are present
+             added generate delete and confirmDelete to generate all PCG
+             in generateAll.. code for view was getting insert code.. fixed that
+	         added headers and footer in advanced main index
+	         in advanced search, checked for no records
+	         changed default number of return rows to 50 in PCG Generated code
+	         added static html pages to full generation including contact and mailContact.php
+	         Added view and Delete and list and search code for advanced and simple generator
+	         in simple list all, changed listAll look and feel 
+
+08/30/2004  - removed webCommonComponent definition from generated classConstatns as it was already defined in webConstants   
+              changed generatePCGListAllCode and generatePCGSearchScriptCode  to check whether getElements are defined or else to set them to blank
+              
+08/31/2004  - added a new utils class called requestUtils to get Elements from form (to avoid magicquotes on/off problem)
+              changed pcg generatored codes to get elements from form using requestUtils
+              added javascript dhtml tree menu code from http://www.mattkruse.com/javascript/mktree/
+            
+09/08/2004  - changed pageConstants FILE_SEPARATOR to WEB_SEPARTOR for some constants wrongly defined.
+              changed request utils to check for array.. if array.. return entire data and dont add slashes
+              
+10/05/2004 - in GenManager->getAll.. the method call to GenDao->searchAll was wrongly generated. The sortBy and sortOrder was always being passed as blank. Fixed that.
+             added DEBUG_PRINT_SQL and DEBUG_PRINT_COUNT_SQL  to applicationConstants in generated Code.. to be able to print out SQL being executed for debugging purposes
+             configurationFileName was being cased (upper and lower) differently in app and web layer.. fixed that
+             changed all Calls to $_REQUEST in frontEnd PCG code to requestUtils::getRequestObject('fieldName') to avoid problems with magic quotes and prevent sql injections
+             In all PCG web front end, $arguments was not being initialized as an array.. modified all code for proper $arguments array initialization
+                        
+10/10/2004 - Added one constant in ApplicationConstants GENERATE_FOR_PHP5, to make PCG framework apps, php5 code
+             Modified Generated Info, GenManager and GenDao classes to generate php5 code if flag id true
+             Info member variables set to private in php5 and __construct and __destruct method added
+             GenDAO and GenManager declared as abstract in generation for php5
+             *** Reverted back to non-protected --> GenDAO and GenManager methods declared as protected when generated for php5
+             Added Object Types passed to methods in GenDAO and GenManager for php5 Code Generation
+             Added Crud Grid Generation for both Simple and PCG Framework applications
+             Added common HTML pages and style sheet for entire simple app generation
+             
+             

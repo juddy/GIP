@@ -1,0 +1,2 @@
+php_value include_path "/home/itomato/openlpos.org/gip/app/settings/"
+php_flag display_errors off
