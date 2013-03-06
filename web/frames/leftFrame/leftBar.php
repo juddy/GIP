@@ -6,8 +6,8 @@ include_once(CLASS_DATABASE_QUERY);
 <script type="text/javascript">
 function changeurl(db,table)
 {
-	parent.mainWindow.location.href="<? echo PAGE_FRAME_RIGHT_MAIN_GENERATOR; ?>?db="+db+"&table="+table
-	parent.genChooser.location.href="<? echo PAGE_FRAME_RIGHT_GEN_CHOOSER; ?>?db="+db+"&table="+table
+        parent.mainWindow.location.href="<? echo PAGE_FRAME_RIGHT_MAIN_GENERATOR; ?>?db="+db+"&table="+table
+        parent.genChooser.location.href="<? echo PAGE_FRAME_RIGHT_GEN_CHOOSER; ?>?db="+db+"&table="+table
 }
 </script>
 <link rel="stylesheet" href="<? echo URL_STYLE_SHEET; ?>" type="text/css">
@@ -15,21 +15,18 @@ function changeurl(db,table)
 <? if (!SHOW_DB_TREE_LIST) { ?>
 
 <style>
-li{ list-style: none; margin-left:0px;  list-style-image: url(<? echo URL_IMAGE_FOLDER; ?>/arrow.gif);} 
-ul{ list-style: none; margin-left:2px; 
-list-style-image: url(<? echo URL_IMAGE_FOLDER; ?>/arrow.gif);} 
+li{ list-style: none; margin-left:0px;  list-style-image: url(<? echo URL_IMAGE_FOLDER; ?>/arrow.gif);}
+ul{ list-style: none; margin-left:2px;
+list-style-image: url(<? echo URL_IMAGE_FOLDER; ?>/arrow.gif);}
 </style>
 
-<? } 
-   else 
-   { 
+<? }
+   else
+   {
 ?>
 <SCRIPT SRC="<? echo URL_JAVASCRIPT_TREE; ?>" LANGUAGE="JavaScript"></SCRIPT>
-<LINK REL="stylesheet" HREF="<? echo URL_STYLE_SHEET_TREE; ?>"> 
+<LINK REL="stylesheet" HREF="<? echo URL_STYLE_SHEET_TREE; ?>">
 <? } ?>
-
-
-
 
 <body background="<? echo URL_IMAGE_FOLDER; ?>/linen.png" >
 
