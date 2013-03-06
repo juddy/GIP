@@ -1,0 +1,127 @@
+BODY {
+  font-family: Verdana, Arial, Helvetica, sans-serif;
+  font-size: 11px;
+  color: #000000;
+  line-height: 18px;
+}
+
+TD {
+  font-family: Verdana, Arial, Helvetica, sans-serif;
+  font-size: 11px;
+  color: #000000;
+    line-height: 18px;
+  }
+
+.miniText {
+  font-family: Verdana, Arial, Helvetica, sans-serif;
+  font-size: 9px;
+  color: #000000;
+  }  
+  
+
+li {
+  font-family: Verdana, Arial, Helvetica, sans-serif;
+  font-size: 11px;
+  color: #000000;
+   line-height: 14px;
+}
+
+.chosen {
+  font-family: Verdana, Arial, Helvetica, sans-serif;
+  font-size: 11px;
+  color: #000000;
+  font-weight: bolder;
+}
+
+ul {
+  font-family: Verdana, Arial, Helvetica, sans-serif;
+  font-size: 11px;
+  color: #000000;
+    line-height: 12px;
+}
+
+code {
+    line-height: 14px;
+}
+
+.header {
+  font-family: Verdana, Arial, Helvetica, sans-serif;
+  font-size: 13px;
+  color: #FFFFFF;
+  font-weight: bolder;
+  line-height: 2
+}
+
+.genChooserLink {
+  font-family: Verdana, Arial, Helvetica, sans-serif;
+  font-size: 11px;
+  font-variant: small-caps;
+  color: #000000;
+  font-weight: bolder;
+}
+
+h1 {
+  color: #60bc4b;
+  font-weight: bold;
+    display: block; text-decoration: none;
+    font: 40px Helvetica, Arial, Sans-Serif; letter-spacing: -1px;  
+    text-align: center;
+    #color: #999; text-shadow: 0px 3px 8px #2a2a2a;
+    text-shadow: 0px 3px 8px #2a2a2a;
+}
+
+h2 {
+  font-family: Verdana, Arial, Helvetica, sans-serif;
+  font-size: 14px;
+  color: #60bc4b;
+}
+
+h3 {
+  font-family: Verdana, Arial, Helvetica, sans-serif;
+  font-size: 13px;
+  color: #ffffff;
+  font-weight: bolder;
+}
+
+h4, .dbName {
+  font-family: Verdana, Arial, Helvetica, sans-serif;
+  font-size: 13px;
+  color: #000000;
+  font-weight: bolder;
+}
+
+h5 {
+  font-family: Verdana, Arial, Helvetica, sans-serif;
+  font-size: 12px;
+  color: #ffffff;
+  font-weight: 100;
+}
+
+h6 {
+  font-family: Verdana, Arial, Helvetica, sans-serif;
+  font-size: 10px;
+  color: #CCCCCC;
+}
+
+a:link {
+  color: #00007f;
+}
+
+a:visited {
+  color: #1d2eb1;
+ }
+
+a:hover {
+  color: #0000ff;
+  text-decoration: none;
+}
+
+a:active {
+  color: #202dbf;
+  font-weight: bolder;
+  text-decoration: none;
+}
+
+.red {
+  color: #CC0000;
+}

@@ -1,0 +1,5 @@
+var searchData=
+[
+  ['row_5fcolor1',['ROW_COLOR1',['../files_copy_template_2php_2gip_framework_2config_2web_constants_8inc_8php.html#a29e257b580b182988aeaf56347c5e177',1,'ROW_COLOR1():&#160;webConstants.inc.php'],['../web_2generated_code_2framework_2opencms_2config_2web_constants_8inc_8php.html#a29e257b580b182988aeaf56347c5e177',1,'ROW_COLOR1():&#160;webConstants.inc.php'],['../web_2generated_code_2test_2performance__schema_2config_2web_constants_8inc_8php.html#a29e257b580b182988aeaf56347c5e177',1,'ROW_COLOR1():&#160;webConstants.inc.php']]],
+  ['row_5fcolor2',['ROW_COLOR2',['../files_copy_template_2php_2gip_framework_2config_2web_constants_8inc_8php.html#a01310eda8387333f4f5f98f1a9638389',1,'ROW_COLOR2():&#160;webConstants.inc.php'],['../web_2generated_code_2framework_2opencms_2config_2web_constants_8inc_8php.html#a01310eda8387333f4f5f98f1a9638389',1,'ROW_COLOR2():&#160;webConstants.inc.php'],['../web_2generated_code_2test_2performance__schema_2config_2web_constants_8inc_8php.html#a01310eda8387333f4f5f98f1a9638389',1,'ROW_COLOR2():&#160;webConstants.inc.php']]]
+];

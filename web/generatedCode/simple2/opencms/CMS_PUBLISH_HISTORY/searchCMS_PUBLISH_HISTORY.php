@@ -1,0 +1,136 @@
+<?php
+include_once("../common/dbConnection.php");
+include_once("../common/header.php");
+?>
+<?
+function highlightSearchTerms($fullText, $searchTerm, $bgcolor="#FFFF99")
+{
+	if (empty($searchTerm))
+	{
+		return $fullText;
+	}
+	else
+	{
+		$start_tag = "<span style=\"background-color: $bgcolor\">";
+		$end_tag = "</span>";
+		$highlighted_results = $start_tag . $searchTerm . $end_tag;
+		return eregi_replace($searchTerm, $highlighted_results, $fullText);
+	}
+}
+
+?>
+<?php
+$thisKeyword = $_REQUEST['keyword'];
+?>
+<?
+$sqlQuery = "SELECT *  FROM CMS_PUBLISH_HISTORY WHERE HISTORY_ID like '%$thisKeyword%'  OR PUBLISH_TAG like '%$thisKeyword%'  OR STRUCTURE_ID like '%$thisKeyword%'  OR RESOURCE_ID like '%$thisKeyword%'  OR RESOURCE_PATH like '%$thisKeyword%'  OR RESOURCE_STATE like '%$thisKeyword%'  OR RESOURCE_TYPE like '%$thisKeyword%'  OR SIBLING_COUNT like '%$thisKeyword%' ";
+$result = MYSQL_QUERY($sqlQuery);
+$numberOfRows = MYSQL_NUM_ROWS($result);
+
+?>
+<?
+if ($numberOfRows==0) {  
+?>
+
+ Sorry. No records found !!
+
+<?
+}
+else if ($numberOfRows>0) {
+
+	$i=0;
+?>
+<TABLE CELLSPACING="0" CELLPADDING="3" BORDER="0" WIDTH="100%">
+	<TR>
+		<TD>
+			<a href="<? echo $PHP_SELF; ?>?sortBy=HISTORY_ID&sortOrder=<? echo $newSortOrder; ?>&startLimit=<? echo $startLimit; ?>&rows=<? echo $limitPerPage; ?>">
+				<B>HISTORY_ID</B>
+			</a>
+</TD>
+		<TD>
+			<a href="<? echo $PHP_SELF; ?>?sortBy=PUBLISH_TAG&sortOrder=<? echo $newSortOrder; ?>&startLimit=<? echo $startLimit; ?>&rows=<? echo $limitPerPage; ?>">
+				<B>PUBLISH_TAG</B>
+			</a>
+</TD>
+		<TD>
+			<a href="<? echo $PHP_SELF; ?>?sortBy=STRUCTURE_ID&sortOrder=<? echo $newSortOrder; ?>&startLimit=<? echo $startLimit; ?>&rows=<? echo $limitPerPage; ?>">
+				<B>STRUCTURE_ID</B>
+			</a>
+</TD>
+		<TD>
+			<a href="<? echo $PHP_SELF; ?>?sortBy=RESOURCE_ID&sortOrder=<? echo $newSortOrder; ?>&startLimit=<? echo $startLimit; ?>&rows=<? echo $limitPerPage; ?>">
+				<B>RESOURCE_ID</B>
+			</a>
+</TD>
+		<TD>
+			<a href="<? echo $PHP_SELF; ?>?sortBy=RESOURCE_PATH&sortOrder=<? echo $newSortOrder; ?>&startLimit=<? echo $startLimit; ?>&rows=<? echo $limitPerPage; ?>">
+				<B>RESOURCE_PATH</B>
+			</a>
+</TD>
+		<TD>
+			<a href="<? echo $PHP_SELF; ?>?sortBy=RESOURCE_STATE&sortOrder=<? echo $newSortOrder; ?>&startLimit=<? echo $startLimit; ?>&rows=<? echo $limitPerPage; ?>">
+				<B>RESOURCE_STATE</B>
+			</a>
+</TD>
+		<TD>
+			<a href="<? echo $PHP_SELF; ?>?sortBy=RESOURCE_TYPE&sortOrder=<? echo $newSortOrder; ?>&startLimit=<? echo $startLimit; ?>&rows=<? echo $limitPerPage; ?>">
+				<B>RESOURCE_TYPE</B>
+			</a>
+</TD>
+		<TD>
+			<a href="<? echo $PHP_SELF; ?>?sortBy=SIBLING_COUNT&sortOrder=<? echo $newSortOrder; ?>&startLimit=<? echo $startLimit; ?>&rows=<? echo $limitPerPage; ?>">
+				<B>SIBLING_COUNT</B>
+			</a>
+</TD>
+	</TR>
+<?
+$highlightColor = "#FFFF99"; 
+
+	while ($i<$numberOfRows)
+	{
+
+		if (($i%2)==0) { $bgColor = "#FFFFFF"; } else { $bgColor = "#C0C0C0"; }
+
+	$thisHISTORY_ID = MYSQL_RESULT($result,$i,"HISTORY_ID");
+	$thisPUBLISH_TAG = MYSQL_RESULT($result,$i,"PUBLISH_TAG");
+	$thisSTRUCTURE_ID = MYSQL_RESULT($result,$i,"STRUCTURE_ID");
+	$thisRESOURCE_ID = MYSQL_RESULT($result,$i,"RESOURCE_ID");
+	$thisRESOURCE_PATH = MYSQL_RESULT($result,$i,"RESOURCE_PATH");
+	$thisRESOURCE_STATE = MYSQL_RESULT($result,$i,"RESOURCE_STATE");
+	$thisRESOURCE_TYPE = MYSQL_RESULT($result,$i,"RESOURCE_TYPE");
+	$thisSIBLING_COUNT = MYSQL_RESULT($result,$i,"SIBLING_COUNT");
+	$thisHISTORY_ID = highlightSearchTerms($thisHISTORY_ID, $thisKeyword, $highlightColor); 
+	$thisPUBLISH_TAG = highlightSearchTerms($thisPUBLISH_TAG, $thisKeyword, $highlightColor); 
+	$thisSTRUCTURE_ID = highlightSearchTerms($thisSTRUCTURE_ID, $thisKeyword, $highlightColor); 
+	$thisRESOURCE_ID = highlightSearchTerms($thisRESOURCE_ID, $thisKeyword, $highlightColor); 
+	$thisRESOURCE_PATH = highlightSearchTerms($thisRESOURCE_PATH, $thisKeyword, $highlightColor); 
+	$thisRESOURCE_STATE = highlightSearchTerms($thisRESOURCE_STATE, $thisKeyword, $highlightColor); 
+	$thisRESOURCE_TYPE = highlightSearchTerms($thisRESOURCE_TYPE, $thisKeyword, $highlightColor); 
+	$thisSIBLING_COUNT = highlightSearchTerms($thisSIBLING_COUNT, $thisKeyword, $highlightColor); 
+
+?>
+	<TR BGCOLOR="<? echo $bgColor; ?>">
+		<TD><? echo $thisHISTORY_ID; ?></TD>
+		<TD><? echo $thisPUBLISH_TAG; ?></TD>
+		<TD><? echo $thisSTRUCTURE_ID; ?></TD>
+		<TD><? echo $thisRESOURCE_ID; ?></TD>
+		<TD><? echo $thisRESOURCE_PATH; ?></TD>
+		<TD><? echo $thisRESOURCE_STATE; ?></TD>
+		<TD><? echo $thisRESOURCE_TYPE; ?></TD>
+		<TD><? echo $thisSIBLING_COUNT; ?></TD>
+	<TD><a href="editCMS_PUBLISH_HISTORY.php?HISTORY_IDField=<? echo $thisHISTORY_ID; ?>">Edit</a></TD>
+	<TD><a href="confirmDeleteCMS_PUBLISH_HISTORY.php?HISTORY_IDField=<? echo $thisHISTORY_ID; ?>">Delete</a></TD>
+	</TR>
+<?
+		$i++;
+
+	} // end while loop
+?>
+</TABLE>
+<?
+} // end of if numberOfRows > 0 
+ ?>
+
+<?php
+include_once("../common/footer.php");
+?>
