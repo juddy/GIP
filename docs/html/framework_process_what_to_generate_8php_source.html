@@ -3,7 +3,7 @@
 <head>
 <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
-<title>GIP: web/generators/php/gipFramework/frameworkProcessWhatToGenerate.php Source File</title>
+<title>GIP: /var/www/gip/web/generators/php/gipFramework/frameworkProcessWhatToGenerate.php Source File</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -97,8 +97,8 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;include_once(<a class="code" href="class_definitions_8inc_8php.html#a6fb989a6f52d1587d2a4693db9bb7da3">CLASS_FILESYSTEM_UTILS</a>);</div>
 <div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;include_once(<a class="code" href="class_definitions_8inc_8php.html#a7c53eff28075a24b3f28c89b4f9471ad">CLASS_TABLE</a>);</div>
 <div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;include_once(<a class="code" href="class_definitions_8inc_8php.html#a9718c85d889c7c3759c07c75670ed7ae">CLASS_PLUGIN_LOADER</a>);</div>
-<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;include_once(<a class="code" href="class_definitions_8inc_8php.html#abb9f86e930be674df481252e34f05c46">CLASS_PHP_GENIE_UTILS_INDEX_BUILDER</a>);</div>
-<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;include_once(<a class="code" href="class_definitions_8inc_8php.html#a3e6a733fa17cd890705c938a449e51e5">CLASS_PHP_GENIE_UTILS_COMMON_FILE_COPIER</a>);</div>
+<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;include_once(CLASS_PHP_GENIE_UTILS_INDEX_BUILDER);</div>
+<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;include_once(CLASS_PHP_GENIE_UTILS_COMMON_FILE_COPIER);</div>
 <div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;</div>
 <div class="line"><a name="l00012"></a><span class="lineno"><a class="code" href="framework_process_what_to_generate_8php.html#ac39bca4b9318f3dc6e794a68107d48c7">   12</a></span>&#160;<a class="code" href="generate_ejb_code_8php.html#ac39bca4b9318f3dc6e794a68107d48c7">$thisPlugInLoader</a> = <span class="keyword">new</span> <a class="code" href="classplug_in_loader.html">plugInLoader</a>();</div>
 <div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;</div>
@@ -203,8 +203,8 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00112"></a><span class="lineno">  112</span>&#160;</div>
 <div class="line"><a name="l00113"></a><span class="lineno">  113</span>&#160;</div>
 <div class="line"><a name="l00114"></a><span class="lineno">  114</span>&#160;                $dbConstantsCode = <a class="code" href="generate_ejb_code_8php.html#ac39bca4b9318f3dc6e794a68107d48c7">$thisPlugInLoader</a>-&gt;loadPlugIn(</div>
-<div class="line"><a name="l00115"></a><span class="lineno">  115</span>&#160;                <a class="code" href="php_plugins_8inc_8php.html#a32c61a0d1394c6fb9f31acbebaf2f9c4">PLUGIN_PHP_GENIE_COMMONDB_GENERATOR_NAME</a>,</div>
-<div class="line"><a name="l00116"></a><span class="lineno">  116</span>&#160;                <a class="code" href="php_plugins_8inc_8php.html#a7c19827521c61e92973b765010cb7ce2">PLUGIN_PHP_GENIE_COMMONDB_GENERATOR_CLASS</a>,</div>
+<div class="line"><a name="l00115"></a><span class="lineno">  115</span>&#160;                PLUGIN_PHP_GENIE_COMMONDB_GENERATOR_NAME,</div>
+<div class="line"><a name="l00116"></a><span class="lineno">  116</span>&#160;                PLUGIN_PHP_GENIE_COMMONDB_GENERATOR_CLASS,</div>
 <div class="line"><a name="l00117"></a><span class="lineno">  117</span>&#160;                <a class="code" href="choose_field_types_for_ejb_gen_8php.html#ad6fc64f5d3f894524f8a872b024e017c">$arguments</a></div>
 <div class="line"><a name="l00118"></a><span class="lineno">  118</span>&#160;                );</div>
 <div class="line"><a name="l00119"></a><span class="lineno">  119</span>&#160;</div>
@@ -213,8 +213,8 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00122"></a><span class="lineno">  122</span>&#160;                <a class="code" href="framework_process_what_to_generate_8php.html#ae777b83d0bfd91f415a3bdffa6b041c9">$thisFileUtils</a>-&gt;writeContentsToFile($configDirectory,$dbConstantsFileName, $dbConstantsCode);</div>
 <div class="line"><a name="l00123"></a><span class="lineno">  123</span>&#160;</div>
 <div class="line"><a name="l00124"></a><span class="lineno">  124</span>&#160;                $configurationFileCode = <a class="code" href="generate_ejb_code_8php.html#ac39bca4b9318f3dc6e794a68107d48c7">$thisPlugInLoader</a>-&gt;loadPlugIn(</div>
-<div class="line"><a name="l00125"></a><span class="lineno">  125</span>&#160;                <a class="code" href="php_plugins_8inc_8php.html#a4750ac3775a9c94d9de73a484177b211">PLUGIN_PHP_GENIE_CONFIGURATION_FILE_GENERATOR_NAME</a>,</div>
-<div class="line"><a name="l00126"></a><span class="lineno">  126</span>&#160;                <a class="code" href="php_plugins_8inc_8php.html#a5acd56a93a5c259cb6814fef7c9c7e5a">PLUGIN_PHP_GENIE_CONFIGURATION_FILE_GENERATOR_CLASS</a>,</div>
+<div class="line"><a name="l00125"></a><span class="lineno">  125</span>&#160;                PLUGIN_PHP_GENIE_CONFIGURATION_FILE_GENERATOR_NAME,</div>
+<div class="line"><a name="l00126"></a><span class="lineno">  126</span>&#160;                PLUGIN_PHP_GENIE_CONFIGURATION_FILE_GENERATOR_CLASS,</div>
 <div class="line"><a name="l00127"></a><span class="lineno">  127</span>&#160;                <a class="code" href="choose_field_types_for_ejb_gen_8php.html#ad6fc64f5d3f894524f8a872b024e017c">$arguments</a></div>
 <div class="line"><a name="l00128"></a><span class="lineno">  128</span>&#160;                );</div>
 <div class="line"><a name="l00129"></a><span class="lineno">  129</span>&#160;                $configurationFileName = <a class="code" href="gen_chooser_2gen_chooser_8php.html#a57df8e3283aefeba4a4c075b5bd63371">$thisDb</a>.<span class="stringliteral">&quot;.conf.php&quot;</span>;</div>
@@ -222,8 +222,8 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00131"></a><span class="lineno">  131</span>&#160;</div>
 <div class="line"><a name="l00132"></a><span class="lineno">  132</span>&#160;</div>
 <div class="line"><a name="l00133"></a><span class="lineno">  133</span>&#160;                $pageConstantsCode = <a class="code" href="generate_ejb_code_8php.html#ac39bca4b9318f3dc6e794a68107d48c7">$thisPlugInLoader</a>-&gt;loadPlugIn(</div>
-<div class="line"><a name="l00134"></a><span class="lineno">  134</span>&#160;                <a class="code" href="php_plugins_8inc_8php.html#a91d8788d6ac8f883d6d8aa2647adfac0">PLUGIN_PHP_GENIE_COMMONPAGES_GENERATOR_NAME</a>,</div>
-<div class="line"><a name="l00135"></a><span class="lineno">  135</span>&#160;                <a class="code" href="php_plugins_8inc_8php.html#a269e58a75a56f8e369f08001d32350c8">PLUGIN_PHP_GENIE_COMMONPAGES_GENERATOR_CLASS</a>,</div>
+<div class="line"><a name="l00134"></a><span class="lineno">  134</span>&#160;                PLUGIN_PHP_GENIE_COMMONPAGES_GENERATOR_NAME,</div>
+<div class="line"><a name="l00135"></a><span class="lineno">  135</span>&#160;                PLUGIN_PHP_GENIE_COMMONPAGES_GENERATOR_CLASS,</div>
 <div class="line"><a name="l00136"></a><span class="lineno">  136</span>&#160;                <a class="code" href="choose_field_types_for_ejb_gen_8php.html#ad6fc64f5d3f894524f8a872b024e017c">$arguments</a></div>
 <div class="line"><a name="l00137"></a><span class="lineno">  137</span>&#160;                );</div>
 <div class="line"><a name="l00138"></a><span class="lineno">  138</span>&#160;</div>
@@ -232,8 +232,8 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00141"></a><span class="lineno">  141</span>&#160;</div>
 <div class="line"><a name="l00142"></a><span class="lineno">  142</span>&#160;</div>
 <div class="line"><a name="l00143"></a><span class="lineno">  143</span>&#160;                $classConstantsCode = <a class="code" href="generate_ejb_code_8php.html#ac39bca4b9318f3dc6e794a68107d48c7">$thisPlugInLoader</a>-&gt;loadPlugIn(</div>
-<div class="line"><a name="l00144"></a><span class="lineno">  144</span>&#160;                <a class="code" href="php_plugins_8inc_8php.html#a44d59ecff3f8af976bdeb5f15e4d4dd6">PLUGIN_PHP_GENIE_COMMON_CLASSES_GENERATOR_NAME</a>,</div>
-<div class="line"><a name="l00145"></a><span class="lineno">  145</span>&#160;                <a class="code" href="php_plugins_8inc_8php.html#a3dbf468504394116a321cb5684f4e938">PLUGIN_PHP_GENIE_COMMON_CLASSES_GENERATOR_CLASS</a>,</div>
+<div class="line"><a name="l00144"></a><span class="lineno">  144</span>&#160;                PLUGIN_PHP_GENIE_COMMON_CLASSES_GENERATOR_NAME,</div>
+<div class="line"><a name="l00145"></a><span class="lineno">  145</span>&#160;                PLUGIN_PHP_GENIE_COMMON_CLASSES_GENERATOR_CLASS,</div>
 <div class="line"><a name="l00146"></a><span class="lineno">  146</span>&#160;                <a class="code" href="choose_field_types_for_ejb_gen_8php.html#ad6fc64f5d3f894524f8a872b024e017c">$arguments</a></div>
 <div class="line"><a name="l00147"></a><span class="lineno">  147</span>&#160;                );</div>
 <div class="line"><a name="l00148"></a><span class="lineno">  148</span>&#160;</div>
@@ -276,8 +276,8 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00185"></a><span class="lineno">  185</span>&#160;                        <a class="code" href="choose_field_types_for_ejb_gen_8php.html#ad6fc64f5d3f894524f8a872b024e017c">$arguments</a>[<span class="stringliteral">&#39;db&#39;</span>] = <a class="code" href="gen_chooser_2gen_chooser_8php.html#a57df8e3283aefeba4a4c075b5bd63371">$thisDb</a>;</div>
 <div class="line"><a name="l00186"></a><span class="lineno">  186</span>&#160;</div>
 <div class="line"><a name="l00187"></a><span class="lineno">  187</span>&#160;                        $genDaoCode = <a class="code" href="generate_ejb_code_8php.html#ac39bca4b9318f3dc6e794a68107d48c7">$thisPlugInLoader</a>-&gt;loadPlugIn(</div>
-<div class="line"><a name="l00188"></a><span class="lineno">  188</span>&#160;                        <a class="code" href="php_plugins_8inc_8php.html#a527d34555f83a04c79840bd6c8971556">PLUGIN_PHP_GENIE_APP_GENDAO_GENERATOR_NAME</a>,</div>
-<div class="line"><a name="l00189"></a><span class="lineno">  189</span>&#160;                        <a class="code" href="php_plugins_8inc_8php.html#a684c3cb76cb7a5069e15fbaf5fbbf43b">PLUGIN_PHP_GENIE_APP_GENDAO_GENERATOR_CLASS</a>,</div>
+<div class="line"><a name="l00188"></a><span class="lineno">  188</span>&#160;                        PLUGIN_PHP_GENIE_APP_GENDAO_GENERATOR_NAME,</div>
+<div class="line"><a name="l00189"></a><span class="lineno">  189</span>&#160;                        PLUGIN_PHP_GENIE_APP_GENDAO_GENERATOR_CLASS,</div>
 <div class="line"><a name="l00190"></a><span class="lineno">  190</span>&#160;                        <a class="code" href="choose_field_types_for_ejb_gen_8php.html#ad6fc64f5d3f894524f8a872b024e017c">$arguments</a></div>
 <div class="line"><a name="l00191"></a><span class="lineno">  191</span>&#160;                        );</div>
 <div class="line"><a name="l00192"></a><span class="lineno">  192</span>&#160;</div>
@@ -295,8 +295,8 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00204"></a><span class="lineno">  204</span>&#160;                        <a class="code" href="choose_field_types_for_ejb_gen_8php.html#ad6fc64f5d3f894524f8a872b024e017c">$arguments</a>[<span class="stringliteral">&#39;db&#39;</span>] = <a class="code" href="gen_chooser_2gen_chooser_8php.html#a57df8e3283aefeba4a4c075b5bd63371">$thisDb</a>;</div>
 <div class="line"><a name="l00205"></a><span class="lineno">  205</span>&#160;</div>
 <div class="line"><a name="l00206"></a><span class="lineno">  206</span>&#160;                        $genManagerCode = <a class="code" href="generate_ejb_code_8php.html#ac39bca4b9318f3dc6e794a68107d48c7">$thisPlugInLoader</a>-&gt;loadPlugIn(</div>
-<div class="line"><a name="l00207"></a><span class="lineno">  207</span>&#160;                        <a class="code" href="php_plugins_8inc_8php.html#a2daff5e6fde1cec6850fa1f255d77056">PLUGIN_PHP_GENIE_APP_GENMANAGER_GENERATOR_NAME</a>,</div>
-<div class="line"><a name="l00208"></a><span class="lineno">  208</span>&#160;                        <a class="code" href="php_plugins_8inc_8php.html#a9512c33bedb27f395d623620a43a845e">PLUGIN_PHP_GENIE_APP_GENMANAGER_GENERATOR_CLASS</a>,</div>
+<div class="line"><a name="l00207"></a><span class="lineno">  207</span>&#160;                        PLUGIN_PHP_GENIE_APP_GENMANAGER_GENERATOR_NAME,</div>
+<div class="line"><a name="l00208"></a><span class="lineno">  208</span>&#160;                        PLUGIN_PHP_GENIE_APP_GENMANAGER_GENERATOR_CLASS,</div>
 <div class="line"><a name="l00209"></a><span class="lineno">  209</span>&#160;                        <a class="code" href="choose_field_types_for_ejb_gen_8php.html#ad6fc64f5d3f894524f8a872b024e017c">$arguments</a></div>
 <div class="line"><a name="l00210"></a><span class="lineno">  210</span>&#160;                        );</div>
 <div class="line"><a name="l00211"></a><span class="lineno">  211</span>&#160;</div>
@@ -315,8 +315,8 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00224"></a><span class="lineno">  224</span>&#160;</div>
 <div class="line"><a name="l00225"></a><span class="lineno">  225</span>&#160;</div>
 <div class="line"><a name="l00226"></a><span class="lineno">  226</span>&#160;                        $genInfoCode = <a class="code" href="generate_ejb_code_8php.html#ac39bca4b9318f3dc6e794a68107d48c7">$thisPlugInLoader</a>-&gt;loadPlugIn(</div>
-<div class="line"><a name="l00227"></a><span class="lineno">  227</span>&#160;                        <a class="code" href="php_plugins_8inc_8php.html#a40f2e79253471c6bc7781f27c72aea7b">PLUGIN_PHP_GENIE_APP_INFO_GENERATOR_NAME</a>,</div>
-<div class="line"><a name="l00228"></a><span class="lineno">  228</span>&#160;                        <a class="code" href="php_plugins_8inc_8php.html#a79f3b3a940e3d1cfced714a66bc6e4e4">PLUGIN_PHP_GENIE_APP_INFO_GENERATOR_CLASS</a>,</div>
+<div class="line"><a name="l00227"></a><span class="lineno">  227</span>&#160;                        PLUGIN_PHP_GENIE_APP_INFO_GENERATOR_NAME,</div>
+<div class="line"><a name="l00228"></a><span class="lineno">  228</span>&#160;                        PLUGIN_PHP_GENIE_APP_INFO_GENERATOR_CLASS,</div>
 <div class="line"><a name="l00229"></a><span class="lineno">  229</span>&#160;                        <a class="code" href="choose_field_types_for_ejb_gen_8php.html#ad6fc64f5d3f894524f8a872b024e017c">$arguments</a></div>
 <div class="line"><a name="l00230"></a><span class="lineno">  230</span>&#160;                        );</div>
 <div class="line"><a name="l00231"></a><span class="lineno">  231</span>&#160;</div>
@@ -333,8 +333,8 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00242"></a><span class="lineno">  242</span>&#160;                        <a class="code" href="choose_field_types_for_ejb_gen_8php.html#ad6fc64f5d3f894524f8a872b024e017c">$arguments</a>[<span class="stringliteral">&#39;db&#39;</span>] = <a class="code" href="gen_chooser_2gen_chooser_8php.html#a57df8e3283aefeba4a4c075b5bd63371">$thisDb</a>;</div>
 <div class="line"><a name="l00243"></a><span class="lineno">  243</span>&#160;</div>
 <div class="line"><a name="l00244"></a><span class="lineno">  244</span>&#160;                        $managerCode = <a class="code" href="generate_ejb_code_8php.html#ac39bca4b9318f3dc6e794a68107d48c7">$thisPlugInLoader</a>-&gt;loadPlugIn(</div>
-<div class="line"><a name="l00245"></a><span class="lineno">  245</span>&#160;                        <a class="code" href="php_plugins_8inc_8php.html#a6f916e7942828dc68d49c2835a0f4267">PLUGIN_PHP_GENIE_APP_MANAGER_GENERATOR_NAME</a>,</div>
-<div class="line"><a name="l00246"></a><span class="lineno">  246</span>&#160;                        <a class="code" href="php_plugins_8inc_8php.html#a93cf5ce26bf8a2de0740ce117837419b">PLUGIN_PHP_GENIE_APP_MANAGER_GENERATOR_CLASS</a>,</div>
+<div class="line"><a name="l00245"></a><span class="lineno">  245</span>&#160;                        PLUGIN_PHP_GENIE_APP_MANAGER_GENERATOR_NAME,</div>
+<div class="line"><a name="l00246"></a><span class="lineno">  246</span>&#160;                        PLUGIN_PHP_GENIE_APP_MANAGER_GENERATOR_CLASS,</div>
 <div class="line"><a name="l00247"></a><span class="lineno">  247</span>&#160;                        <a class="code" href="choose_field_types_for_ejb_gen_8php.html#ad6fc64f5d3f894524f8a872b024e017c">$arguments</a></div>
 <div class="line"><a name="l00248"></a><span class="lineno">  248</span>&#160;                        );</div>
 <div class="line"><a name="l00249"></a><span class="lineno">  249</span>&#160;</div>
@@ -351,8 +351,8 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00260"></a><span class="lineno">  260</span>&#160;                        <a class="code" href="choose_field_types_for_ejb_gen_8php.html#ad6fc64f5d3f894524f8a872b024e017c">$arguments</a>[<span class="stringliteral">&#39;db&#39;</span>] = <a class="code" href="gen_chooser_2gen_chooser_8php.html#a57df8e3283aefeba4a4c075b5bd63371">$thisDb</a>;</div>
 <div class="line"><a name="l00261"></a><span class="lineno">  261</span>&#160;</div>
 <div class="line"><a name="l00262"></a><span class="lineno">  262</span>&#160;                        $daoCode = <a class="code" href="generate_ejb_code_8php.html#ac39bca4b9318f3dc6e794a68107d48c7">$thisPlugInLoader</a>-&gt;loadPlugIn(</div>
-<div class="line"><a name="l00263"></a><span class="lineno">  263</span>&#160;                        <a class="code" href="php_plugins_8inc_8php.html#a15772ff6445c72f50b2054c1400b9953">PLUGIN_PHP_GENIE_APP_DAO_GENERATOR_NAME</a>,</div>
-<div class="line"><a name="l00264"></a><span class="lineno">  264</span>&#160;                        <a class="code" href="php_plugins_8inc_8php.html#a8df52f9fb840b39b5eb28065690c4994">PLUGIN_PHP_GENIE_APP_DAO_GENERATOR_CLASS</a>,</div>
+<div class="line"><a name="l00263"></a><span class="lineno">  263</span>&#160;                        PLUGIN_PHP_GENIE_APP_DAO_GENERATOR_NAME,</div>
+<div class="line"><a name="l00264"></a><span class="lineno">  264</span>&#160;                        PLUGIN_PHP_GENIE_APP_DAO_GENERATOR_CLASS,</div>
 <div class="line"><a name="l00265"></a><span class="lineno">  265</span>&#160;                        <a class="code" href="choose_field_types_for_ejb_gen_8php.html#ad6fc64f5d3f894524f8a872b024e017c">$arguments</a></div>
 <div class="line"><a name="l00266"></a><span class="lineno">  266</span>&#160;                        );</div>
 <div class="line"><a name="l00267"></a><span class="lineno">  267</span>&#160;</div>
@@ -397,14 +397,14 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00306"></a><span class="lineno">  306</span>&#160;</div>
 <div class="line"><a name="l00307"></a><span class="lineno">  307</span>&#160;</div>
 <div class="line"><a name="l00308"></a><span class="lineno">  308</span>&#160;                        $generatedCrudGridCode = <a class="code" href="generate_ejb_code_8php.html#ac39bca4b9318f3dc6e794a68107d48c7">$thisPlugInLoader</a>-&gt;loadPlugIn(</div>
-<div class="line"><a name="l00309"></a><span class="lineno">  309</span>&#160;                        <a class="code" href="php_plugins_8inc_8php.html#aa8c7b0aefd052667dd50ea1a1fe4ab86">PLUGIN_PHP_GENIE_WEB_CRUD_GRID_GENERATOR_NAME</a>,</div>
-<div class="line"><a name="l00310"></a><span class="lineno">  310</span>&#160;                        <a class="code" href="php_plugins_8inc_8php.html#aaf139cbcba2b320f70616f44c77efcd2">PLUGIN_PHP_GENIE_WEB_CRUD_GRID_GENERATOR_CLASS</a>,</div>
+<div class="line"><a name="l00309"></a><span class="lineno">  309</span>&#160;                        PLUGIN_PHP_GENIE_WEB_CRUD_GRID_GENERATOR_NAME,</div>
+<div class="line"><a name="l00310"></a><span class="lineno">  310</span>&#160;                        PLUGIN_PHP_GENIE_WEB_CRUD_GRID_GENERATOR_CLASS,</div>
 <div class="line"><a name="l00311"></a><span class="lineno">  311</span>&#160;                        <a class="code" href="choose_field_types_for_ejb_gen_8php.html#ad6fc64f5d3f894524f8a872b024e017c">$arguments</a></div>
 <div class="line"><a name="l00312"></a><span class="lineno">  312</span>&#160;                        );</div>
 <div class="line"><a name="l00313"></a><span class="lineno">  313</span>&#160;</div>
 <div class="line"><a name="l00314"></a><span class="lineno">  314</span>&#160;                        $generatedEnterFormCode = <a class="code" href="generate_ejb_code_8php.html#ac39bca4b9318f3dc6e794a68107d48c7">$thisPlugInLoader</a>-&gt;loadPlugIn(</div>
-<div class="line"><a name="l00315"></a><span class="lineno">  315</span>&#160;                        <a class="code" href="php_plugins_8inc_8php.html#a629485d053777963061013c74c7faf91">PLUGIN_PHP_GENIE_WEB_ENTER_FORM_GENERATOR_NAME</a>,</div>
-<div class="line"><a name="l00316"></a><span class="lineno">  316</span>&#160;                        <a class="code" href="php_plugins_8inc_8php.html#a0e990cc9d982bb51f32d51ed5207abb8">PLUGIN_PHP_GENIE_WEB_ENTER_FORM_GENERATOR_CLASS</a>,</div>
+<div class="line"><a name="l00315"></a><span class="lineno">  315</span>&#160;                        PLUGIN_PHP_GENIE_WEB_ENTER_FORM_GENERATOR_NAME,</div>
+<div class="line"><a name="l00316"></a><span class="lineno">  316</span>&#160;                        PLUGIN_PHP_GENIE_WEB_ENTER_FORM_GENERATOR_CLASS,</div>
 <div class="line"><a name="l00317"></a><span class="lineno">  317</span>&#160;                        <a class="code" href="choose_field_types_for_ejb_gen_8php.html#ad6fc64f5d3f894524f8a872b024e017c">$arguments</a></div>
 <div class="line"><a name="l00318"></a><span class="lineno">  318</span>&#160;                        );</div>
 <div class="line"><a name="l00319"></a><span class="lineno">  319</span>&#160;</div>
@@ -412,72 +412,72 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00321"></a><span class="lineno">  321</span>&#160;</div>
 <div class="line"><a name="l00322"></a><span class="lineno">  322</span>&#160;</div>
 <div class="line"><a name="l00323"></a><span class="lineno">  323</span>&#160;                        $generatedInsertCode = <a class="code" href="generate_ejb_code_8php.html#ac39bca4b9318f3dc6e794a68107d48c7">$thisPlugInLoader</a>-&gt;loadPlugIn(</div>
-<div class="line"><a name="l00324"></a><span class="lineno">  324</span>&#160;                        <a class="code" href="php_plugins_8inc_8php.html#a8aac022a5ad5c43090fe164e8274030c">PLUGIN_PHP_GENIE_WEB_INSERT_GENERATOR_NAME</a>,</div>
-<div class="line"><a name="l00325"></a><span class="lineno">  325</span>&#160;                        <a class="code" href="php_plugins_8inc_8php.html#aa130ab1044bacf8b553d8b0b1abc4918">PLUGIN_PHP_GENIE_WEB_INSERT_GENERATOR_CLASS</a>,</div>
+<div class="line"><a name="l00324"></a><span class="lineno">  324</span>&#160;                        PLUGIN_PHP_GENIE_WEB_INSERT_GENERATOR_NAME,</div>
+<div class="line"><a name="l00325"></a><span class="lineno">  325</span>&#160;                        PLUGIN_PHP_GENIE_WEB_INSERT_GENERATOR_CLASS,</div>
 <div class="line"><a name="l00326"></a><span class="lineno">  326</span>&#160;                        <a class="code" href="choose_field_types_for_ejb_gen_8php.html#ad6fc64f5d3f894524f8a872b024e017c">$arguments</a></div>
 <div class="line"><a name="l00327"></a><span class="lineno">  327</span>&#160;                        );</div>
 <div class="line"><a name="l00328"></a><span class="lineno">  328</span>&#160;</div>
 <div class="line"><a name="l00329"></a><span class="lineno">  329</span>&#160;</div>
 <div class="line"><a name="l00330"></a><span class="lineno">  330</span>&#160;</div>
 <div class="line"><a name="l00331"></a><span class="lineno">  331</span>&#160;                        $generatedEditFormCode = <a class="code" href="generate_ejb_code_8php.html#ac39bca4b9318f3dc6e794a68107d48c7">$thisPlugInLoader</a>-&gt;loadPlugIn(</div>
-<div class="line"><a name="l00332"></a><span class="lineno">  332</span>&#160;                        <a class="code" href="php_plugins_8inc_8php.html#a728f647abae8fabf79fd9ee82f6082ec">PLUGIN_PHP_GENIE_WEB_EDIT_FORM_GENERATOR_NAME</a>,</div>
-<div class="line"><a name="l00333"></a><span class="lineno">  333</span>&#160;                        <a class="code" href="php_plugins_8inc_8php.html#a3724b4f0de2ed37adffeee43455e308f">PLUGIN_PHP_GENIE_WEB_EDIT_FORM_GENERATOR_CLASS</a>,</div>
+<div class="line"><a name="l00332"></a><span class="lineno">  332</span>&#160;                        PLUGIN_PHP_GENIE_WEB_EDIT_FORM_GENERATOR_NAME,</div>
+<div class="line"><a name="l00333"></a><span class="lineno">  333</span>&#160;                        PLUGIN_PHP_GENIE_WEB_EDIT_FORM_GENERATOR_CLASS,</div>
 <div class="line"><a name="l00334"></a><span class="lineno">  334</span>&#160;                        <a class="code" href="choose_field_types_for_ejb_gen_8php.html#ad6fc64f5d3f894524f8a872b024e017c">$arguments</a></div>
 <div class="line"><a name="l00335"></a><span class="lineno">  335</span>&#160;                        );</div>
 <div class="line"><a name="l00336"></a><span class="lineno">  336</span>&#160;</div>
 <div class="line"><a name="l00337"></a><span class="lineno">  337</span>&#160;</div>
 <div class="line"><a name="l00338"></a><span class="lineno">  338</span>&#160;</div>
 <div class="line"><a name="l00339"></a><span class="lineno">  339</span>&#160;                        $generatedUpdateCode = <a class="code" href="generate_ejb_code_8php.html#ac39bca4b9318f3dc6e794a68107d48c7">$thisPlugInLoader</a>-&gt;loadPlugIn(</div>
-<div class="line"><a name="l00340"></a><span class="lineno">  340</span>&#160;                        <a class="code" href="php_plugins_8inc_8php.html#a1e52209f3c4d87f0392512b0230a8077">PLUGIN_PHP_GENIE_WEB_UPDATE_GENERATOR_NAME</a>,</div>
-<div class="line"><a name="l00341"></a><span class="lineno">  341</span>&#160;                        <a class="code" href="php_plugins_8inc_8php.html#a50dfd347f207c187391546c6470bef6c">PLUGIN_PHP_GENIE_WEB_UPDATE_GENERATOR_CLASS</a>,</div>
+<div class="line"><a name="l00340"></a><span class="lineno">  340</span>&#160;                        PLUGIN_PHP_GENIE_WEB_UPDATE_GENERATOR_NAME,</div>
+<div class="line"><a name="l00341"></a><span class="lineno">  341</span>&#160;                        PLUGIN_PHP_GENIE_WEB_UPDATE_GENERATOR_CLASS,</div>
 <div class="line"><a name="l00342"></a><span class="lineno">  342</span>&#160;                        <a class="code" href="choose_field_types_for_ejb_gen_8php.html#ad6fc64f5d3f894524f8a872b024e017c">$arguments</a></div>
 <div class="line"><a name="l00343"></a><span class="lineno">  343</span>&#160;                        );</div>
 <div class="line"><a name="l00344"></a><span class="lineno">  344</span>&#160;</div>
 <div class="line"><a name="l00345"></a><span class="lineno">  345</span>&#160;</div>
 <div class="line"><a name="l00346"></a><span class="lineno">  346</span>&#160;                        $generatedConfirmDeleteCode = <a class="code" href="generate_ejb_code_8php.html#ac39bca4b9318f3dc6e794a68107d48c7">$thisPlugInLoader</a>-&gt;loadPlugIn(</div>
-<div class="line"><a name="l00347"></a><span class="lineno">  347</span>&#160;                        <a class="code" href="php_plugins_8inc_8php.html#a1bff963b3caf428787c16fe3be0bd17e">PLUGIN_PHP_GENIE_WEB_DELETE_CONFIRMATION_GENERATOR_NAME</a>,</div>
-<div class="line"><a name="l00348"></a><span class="lineno">  348</span>&#160;                        <a class="code" href="php_plugins_8inc_8php.html#a136c469c8c86df68e61c2db08b10d478">PLUGIN_PHP_GENIE_WEB_DELETE_CONFIRMATION_GENERATOR_CLASS</a>,</div>
+<div class="line"><a name="l00347"></a><span class="lineno">  347</span>&#160;                        PLUGIN_PHP_GENIE_WEB_DELETE_CONFIRMATION_GENERATOR_NAME,</div>
+<div class="line"><a name="l00348"></a><span class="lineno">  348</span>&#160;                        PLUGIN_PHP_GENIE_WEB_DELETE_CONFIRMATION_GENERATOR_CLASS,</div>
 <div class="line"><a name="l00349"></a><span class="lineno">  349</span>&#160;                        <a class="code" href="choose_field_types_for_ejb_gen_8php.html#ad6fc64f5d3f894524f8a872b024e017c">$arguments</a></div>
 <div class="line"><a name="l00350"></a><span class="lineno">  350</span>&#160;                        );</div>
 <div class="line"><a name="l00351"></a><span class="lineno">  351</span>&#160;</div>
 <div class="line"><a name="l00352"></a><span class="lineno">  352</span>&#160;</div>
 <div class="line"><a name="l00353"></a><span class="lineno">  353</span>&#160;                        $generatedDeleteCode = <a class="code" href="generate_ejb_code_8php.html#ac39bca4b9318f3dc6e794a68107d48c7">$thisPlugInLoader</a>-&gt;loadPlugIn(</div>
-<div class="line"><a name="l00354"></a><span class="lineno">  354</span>&#160;                        <a class="code" href="php_plugins_8inc_8php.html#a0a4d7aaf9136049a098e30434f66ba0d">PLUGIN_PHP_GENIE_WEB_DELETE_GENERATOR_NAME</a>,</div>
-<div class="line"><a name="l00355"></a><span class="lineno">  355</span>&#160;                        <a class="code" href="php_plugins_8inc_8php.html#ac2deab273b6d9ad4bac55d41af4faa67">PLUGIN_PHP_GENIE_WEB_DELETE_GENERATOR_CLASS</a>,</div>
+<div class="line"><a name="l00354"></a><span class="lineno">  354</span>&#160;                        PLUGIN_PHP_GENIE_WEB_DELETE_GENERATOR_NAME,</div>
+<div class="line"><a name="l00355"></a><span class="lineno">  355</span>&#160;                        PLUGIN_PHP_GENIE_WEB_DELETE_GENERATOR_CLASS,</div>
 <div class="line"><a name="l00356"></a><span class="lineno">  356</span>&#160;                        <a class="code" href="choose_field_types_for_ejb_gen_8php.html#ad6fc64f5d3f894524f8a872b024e017c">$arguments</a></div>
 <div class="line"><a name="l00357"></a><span class="lineno">  357</span>&#160;                        );</div>
 <div class="line"><a name="l00358"></a><span class="lineno">  358</span>&#160;</div>
 <div class="line"><a name="l00359"></a><span class="lineno">  359</span>&#160;</div>
 <div class="line"><a name="l00360"></a><span class="lineno">  360</span>&#160;                        $generatedViewRecordCode = <a class="code" href="generate_ejb_code_8php.html#ac39bca4b9318f3dc6e794a68107d48c7">$thisPlugInLoader</a>-&gt;loadPlugIn(</div>
-<div class="line"><a name="l00361"></a><span class="lineno">  361</span>&#160;                        <a class="code" href="php_plugins_8inc_8php.html#afcf89634d8830f9d380ab6a219b22712">PLUGIN_PHP_GENIE_WEB_VIEW_GENERATOR_NAME</a>,</div>
-<div class="line"><a name="l00362"></a><span class="lineno">  362</span>&#160;                        <a class="code" href="php_plugins_8inc_8php.html#a989e781c0682291fbd0b254ee14bf056">PLUGIN_PHP_GENIE_WEB_VIEW_GENERATOR_CLASS</a>,</div>
+<div class="line"><a name="l00361"></a><span class="lineno">  361</span>&#160;                        PLUGIN_PHP_GENIE_WEB_VIEW_GENERATOR_NAME,</div>
+<div class="line"><a name="l00362"></a><span class="lineno">  362</span>&#160;                        PLUGIN_PHP_GENIE_WEB_VIEW_GENERATOR_CLASS,</div>
 <div class="line"><a name="l00363"></a><span class="lineno">  363</span>&#160;                        <a class="code" href="choose_field_types_for_ejb_gen_8php.html#ad6fc64f5d3f894524f8a872b024e017c">$arguments</a></div>
 <div class="line"><a name="l00364"></a><span class="lineno">  364</span>&#160;                        );</div>
 <div class="line"><a name="l00365"></a><span class="lineno">  365</span>&#160;</div>
 <div class="line"><a name="l00366"></a><span class="lineno">  366</span>&#160;                        $generatedListAllCode =  <a class="code" href="generate_ejb_code_8php.html#ac39bca4b9318f3dc6e794a68107d48c7">$thisPlugInLoader</a>-&gt;loadPlugIn(</div>
-<div class="line"><a name="l00367"></a><span class="lineno">  367</span>&#160;                        <a class="code" href="php_plugins_8inc_8php.html#a37fb8372294a422ed134a03560b53b8b">PLUGIN_PHP_GENIE_WEB_LISTALL_GENERATOR_NAME</a>,</div>
-<div class="line"><a name="l00368"></a><span class="lineno">  368</span>&#160;                        <a class="code" href="php_plugins_8inc_8php.html#ad351b08127dad379c34fbf0a1eeb929e">PLUGIN_PHP_GENIE_WEB_LISTALL_GENERATOR_CLASS</a>,</div>
+<div class="line"><a name="l00367"></a><span class="lineno">  367</span>&#160;                        PLUGIN_PHP_GENIE_WEB_LISTALL_GENERATOR_NAME,</div>
+<div class="line"><a name="l00368"></a><span class="lineno">  368</span>&#160;                        PLUGIN_PHP_GENIE_WEB_LISTALL_GENERATOR_CLASS,</div>
 <div class="line"><a name="l00369"></a><span class="lineno">  369</span>&#160;                        <a class="code" href="choose_field_types_for_ejb_gen_8php.html#ad6fc64f5d3f894524f8a872b024e017c">$arguments</a></div>
 <div class="line"><a name="l00370"></a><span class="lineno">  370</span>&#160;                        );</div>
 <div class="line"><a name="l00371"></a><span class="lineno">  371</span>&#160;</div>
 <div class="line"><a name="l00372"></a><span class="lineno">  372</span>&#160;</div>
 <div class="line"><a name="l00373"></a><span class="lineno">  373</span>&#160;                        $generatedPowerSearchFormCode = <a class="code" href="generate_ejb_code_8php.html#ac39bca4b9318f3dc6e794a68107d48c7">$thisPlugInLoader</a>-&gt;loadPlugIn(</div>
-<div class="line"><a name="l00374"></a><span class="lineno">  374</span>&#160;                        <a class="code" href="php_plugins_8inc_8php.html#a94aa18eb6941a623c3f0e28720c9e763">PLUGIN_PHP_GENIE_WEB_POWER_SEARCH_FORM_GENERATOR_NAME</a>,</div>
-<div class="line"><a name="l00375"></a><span class="lineno">  375</span>&#160;                        <a class="code" href="php_plugins_8inc_8php.html#a2c9238195dbb1da03cf67c8cb8e71fd2">PLUGIN_PHP_GENIE_WEB_POWER_SEARCH_FORM_GENERATOR_CLASS</a>,</div>
+<div class="line"><a name="l00374"></a><span class="lineno">  374</span>&#160;                        PLUGIN_PHP_GENIE_WEB_POWER_SEARCH_FORM_GENERATOR_NAME,</div>
+<div class="line"><a name="l00375"></a><span class="lineno">  375</span>&#160;                        PLUGIN_PHP_GENIE_WEB_POWER_SEARCH_FORM_GENERATOR_CLASS,</div>
 <div class="line"><a name="l00376"></a><span class="lineno">  376</span>&#160;                        <a class="code" href="choose_field_types_for_ejb_gen_8php.html#ad6fc64f5d3f894524f8a872b024e017c">$arguments</a></div>
 <div class="line"><a name="l00377"></a><span class="lineno">  377</span>&#160;                        );</div>
 <div class="line"><a name="l00378"></a><span class="lineno">  378</span>&#160;</div>
 <div class="line"><a name="l00379"></a><span class="lineno">  379</span>&#160;</div>
 <div class="line"><a name="l00380"></a><span class="lineno">  380</span>&#160;                        $generatedPowerSearchScriptCode = <a class="code" href="generate_ejb_code_8php.html#ac39bca4b9318f3dc6e794a68107d48c7">$thisPlugInLoader</a>-&gt;loadPlugIn(</div>
-<div class="line"><a name="l00381"></a><span class="lineno">  381</span>&#160;                        <a class="code" href="php_plugins_8inc_8php.html#ae8a0d671118440ccbefbc4ca5f05c309">PLUGIN_PHP_GENIE_WEB_POWER_SEARCH_SCRIPT_GENERATOR_NAME</a>,</div>
-<div class="line"><a name="l00382"></a><span class="lineno">  382</span>&#160;                        <a class="code" href="php_plugins_8inc_8php.html#af8a4387823d41cbeb6389764c3654783">PLUGIN_PHP_GENIE_WEB_POWER_SEARCH_SCRIPT_GENERATOR_CLASS</a>,</div>
+<div class="line"><a name="l00381"></a><span class="lineno">  381</span>&#160;                        PLUGIN_PHP_GENIE_WEB_POWER_SEARCH_SCRIPT_GENERATOR_NAME,</div>
+<div class="line"><a name="l00382"></a><span class="lineno">  382</span>&#160;                        PLUGIN_PHP_GENIE_WEB_POWER_SEARCH_SCRIPT_GENERATOR_CLASS,</div>
 <div class="line"><a name="l00383"></a><span class="lineno">  383</span>&#160;                        <a class="code" href="choose_field_types_for_ejb_gen_8php.html#ad6fc64f5d3f894524f8a872b024e017c">$arguments</a></div>
 <div class="line"><a name="l00384"></a><span class="lineno">  384</span>&#160;                        );</div>
 <div class="line"><a name="l00385"></a><span class="lineno">  385</span>&#160;</div>
 <div class="line"><a name="l00386"></a><span class="lineno">  386</span>&#160;</div>
 <div class="line"><a name="l00387"></a><span class="lineno">  387</span>&#160;                        $generatedIndexCode = <a class="code" href="generate_ejb_code_8php.html#ac39bca4b9318f3dc6e794a68107d48c7">$thisPlugInLoader</a>-&gt;loadPlugIn(</div>
-<div class="line"><a name="l00388"></a><span class="lineno">  388</span>&#160;                        <a class="code" href="php_plugins_8inc_8php.html#abc067271d0b488d49121a865e311f4ef">PLUGIN_PHP_GENIE_WEB_INDEX_GENERATOR_NAME</a>,</div>
-<div class="line"><a name="l00389"></a><span class="lineno">  389</span>&#160;                        <a class="code" href="php_plugins_8inc_8php.html#a059c8f630e84f7c9a52b3a585977a6cf">PLUGIN_PHP_GENIE_WEB_INDEX_GENERATOR_CLASS</a>,</div>
+<div class="line"><a name="l00388"></a><span class="lineno">  388</span>&#160;                        PLUGIN_PHP_GENIE_WEB_INDEX_GENERATOR_NAME,</div>
+<div class="line"><a name="l00389"></a><span class="lineno">  389</span>&#160;                        PLUGIN_PHP_GENIE_WEB_INDEX_GENERATOR_CLASS,</div>
 <div class="line"><a name="l00390"></a><span class="lineno">  390</span>&#160;                        <a class="code" href="choose_field_types_for_ejb_gen_8php.html#ad6fc64f5d3f894524f8a872b024e017c">$arguments</a></div>
 <div class="line"><a name="l00391"></a><span class="lineno">  391</span>&#160;                        );</div>
 <div class="line"><a name="l00392"></a><span class="lineno">  392</span>&#160;</div>
@@ -537,7 +537,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Wed Mar 6 2013 09:36:11 for GIP by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Thu Mar 7 2013 00:41:20 for GIP by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.1.2
 </small></address>

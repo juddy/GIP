@@ -3,7 +3,7 @@
 <head>
 <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
-<title>GIP: web/generatedCode/simple/opencms/CMS_USERDATA/confirmDeleteCMS_USERDATA.php Source File</title>
+<title>GIP: /var/www/gip/web/generatedCode/simple/opencms/CMS_USERDATA/confirmDeleteCMS_USERDATA.php Source File</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -99,15 +99,15 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;&lt;?php</div>
 <div class="line"><a name="l00009"></a><span class="lineno"><a class="code" href="opencms_2_c_m_s___u_s_e_r_d_a_t_a_2confirm_delete_c_m_s___u_s_e_r_d_a_t_a_8php.html#a83feff35513411fb05c7e863eb280c29">    9</a></span>&#160;<a class="code" href="server_8php.html#a047170d6020a882807665812a27e2525">$sql</a> = <span class="stringliteral">&quot;SELECT   * FROM CMS_USERDATA WHERE USER_ID = &#39;$thisUSER_ID&#39;&quot;</span>;</div>
 <div class="line"><a name="l00010"></a><span class="lineno"><a class="code" href="opencms_2_c_m_s___u_s_e_r_d_a_t_a_2confirm_delete_c_m_s___u_s_e_r_d_a_t_a_8php.html#a112ef069ddc0454086e3d1e6d8d55d07">   10</a></span>&#160;<a class="code" href="app_2common_2lib_2html_mime_mail-2_85_81_2example_81_8php.html#a112ef069ddc0454086e3d1e6d8d55d07">$result</a> = MYSQL_QUERY(<a class="code" href="server_8php.html#a047170d6020a882807665812a27e2525">$sql</a>);</div>
-<div class="line"><a name="l00011"></a><span class="lineno"><a class="code" href="opencms_2_c_m_s___u_s_e_r_d_a_t_a_2confirm_delete_c_m_s___u_s_e_r_d_a_t_a_8php.html#ae8ab0b8d406c7796092b7f13742f859a">   11</a></span>&#160;<a class="code" href="confirm_delete_main_8php.html#ae8ab0b8d406c7796092b7f13742f859a">$numberOfRows</a> = MYSQL_NUMROWS(<a class="code" href="app_2common_2lib_2html_mime_mail-2_85_81_2example_81_8php.html#a112ef069ddc0454086e3d1e6d8d55d07">$result</a>);</div>
-<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;<span class="keywordflow">if</span> (<a class="code" href="confirm_delete_main_8php.html#ae8ab0b8d406c7796092b7f13742f859a">$numberOfRows</a>==0) {  </div>
+<div class="line"><a name="l00011"></a><span class="lineno"><a class="code" href="opencms_2_c_m_s___u_s_e_r_d_a_t_a_2confirm_delete_c_m_s___u_s_e_r_d_a_t_a_8php.html#ae8ab0b8d406c7796092b7f13742f859a">   11</a></span>&#160;<a class="code" href="geer_2geer_2main_2confirm_delete_main_8php.html#ae8ab0b8d406c7796092b7f13742f859a">$numberOfRows</a> = MYSQL_NUMROWS(<a class="code" href="app_2common_2lib_2html_mime_mail-2_85_81_2example_81_8php.html#a112ef069ddc0454086e3d1e6d8d55d07">$result</a>);</div>
+<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;<span class="keywordflow">if</span> (<a class="code" href="geer_2geer_2main_2confirm_delete_main_8php.html#ae8ab0b8d406c7796092b7f13742f859a">$numberOfRows</a>==0) {  </div>
 <div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;?&gt;</div>
 <div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;</div>
 <div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;Sorry. No records found !!</div>
 <div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;</div>
 <div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;&lt;?php</div>
 <div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;}</div>
-<div class="line"><a name="l00019"></a><span class="lineno"><a class="code" href="opencms_2_c_m_s___u_s_e_r_d_a_t_a_2confirm_delete_c_m_s___u_s_e_r_d_a_t_a_8php.html#a395aa6aceeb7f272ab9fcb5f374f8b33">   19</a></span>&#160;<span class="keywordflow">else</span> <span class="keywordflow">if</span> (<a class="code" href="confirm_delete_main_8php.html#ae8ab0b8d406c7796092b7f13742f859a">$numberOfRows</a>&gt;0) {</div>
+<div class="line"><a name="l00019"></a><span class="lineno"><a class="code" href="opencms_2_c_m_s___u_s_e_r_d_a_t_a_2confirm_delete_c_m_s___u_s_e_r_d_a_t_a_8php.html#a395aa6aceeb7f272ab9fcb5f374f8b33">   19</a></span>&#160;<span class="keywordflow">else</span> <span class="keywordflow">if</span> (<a class="code" href="geer_2geer_2main_2confirm_delete_main_8php.html#ae8ab0b8d406c7796092b7f13742f859a">$numberOfRows</a>&gt;0) {</div>
 <div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;</div>
 <div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;        $i=0;</div>
 <div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;        <a class="code" href="opencms_2_c_m_s___g_r_o_u_p_u_s_e_r_s_2delete_c_m_s___g_r_o_u_p_u_s_e_r_s_8php.html#affdd6ff060a51ffcacc5dd6235ecdd73">$thisUSER_ID</a> = MYSQL_RESULT(<a class="code" href="app_2common_2lib_2html_mime_mail-2_85_81_2example_81_8php.html#a112ef069ddc0454086e3d1e6d8d55d07">$result</a>,$i,<span class="stringliteral">&quot;USER_ID&quot;</span>);</div>
@@ -152,7 +152,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Wed Mar 6 2013 09:36:11 for GIP by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Thu Mar 7 2013 00:41:19 for GIP by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.1.2
 </small></address>
