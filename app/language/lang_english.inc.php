@@ -75,7 +75,7 @@ define("LANG_LOGIN_DB_HOSTNAME","Datatabase HostName (IP or Hostname)");
 define("LANG_LOGIN_DB_USER_NAME","Database Username");
 define("LANG_LOGIN_DB_PASSWORD","Database Password");
 define("LANG_LOGIN_RUB_LAMP","Connect");
-define("LANG_LOGIN_RUB_LAMP_DESC","Provide parameters above and click start");
+define("LANG_LOGIN_RUB_LAMP_DESC","Provide parameters above and click launch");
 
 
 define("LANG_GEN_CHOOSER_BEGINNING_PROGRAMMERS","Beginning Programmers");
@@ -315,30 +315,30 @@ define("LANG_UTILS_PCM_PHP_CLASS_MAKER_DESC","This tool builds a php class from 
 define("LANG_UTILS_PCM_CLASS_NAME","Class Name");
 define("LANG_UTILS_PCM_CLASS_VARIABLES","Class Variables");
 define("LANG_UTILS_PCM_CLASS_MEMBER_FUNCTIONS","Member Functions ");
-define("LANG_UTILS_PCM_POPULATE_FORM_WITH_INPUT","Populate Form with sample Input");
+define("LANG_UTILS_PCM_POPULATE_FORM_WITH_INPUT","Populate Form with sample input");
 define("LANG_UTILS_PCM_GENERATE_CLASS_CODE","Generate PHP Class Code");
 
 
 // Generate all headers
 define("LANG_GALL_SIMPLE_CHOOSE_SCHEMA","You need to choose a database schema first to be able to generate code for it. You have not chosen any. Auto Generation cannot proceed. Please choose a database first and then retry autogeneration. ");
 define("LANG_GALL_SIMPLE_DESC","");
-define("LANG_GALL_SIMPLE_GEN_AND_SAVE_ALL","Generate and Save Simple Code for All Tables for Database ");
+define("LANG_GALL_SIMPLE_GEN_AND_SAVE_ALL","Generate and save Simple code for all tables for database ");
 define("LANG_GALL_SIMPLE_CHOOSE_SETTINGS_FOR_AUTO_GEN","Please choose settings for Auto Generation.");
 define("LANG_GALL_SIMPLE_CHOOSE_SETTINGS_FOR_AUTO_GEN","Please choose settings for Auto Generation.");
 define("LANG_GALL_SIMPLE_SELECT_PATH","Put the path that you want the generated code in. Make sure that apache has permission to write to it.");
 define("LANG_GALL_SIMPLE_CHOOSE_MODULES","Please choose the modules that you want to be generated.");
-define("LANG_GALL_SIMPLE_GENERATE_BUTTON","Generate and Save All Code");
+define("LANG_GALL_SIMPLE_GENERATE_BUTTON","Generate and save all code");
 
 
 // GENERATE ALL ADVANCED
-define("LANG_GALL_ADV_HEADER","GIP Framework Generate All Code");
+define("LANG_GALL_ADV_HEADER","Generate all GIP Framework code");
 define("LANG_GALL_ADV_DESC","xxx");
 define("LANG_GALL_ADV_CHOOSE_SETTINGS_FOR_AUTO_GEN","Please choose settings for Auto Generation.");
 define("LANG_GALL_ADV_CONFIG_FILE","Config File");
 define("LANG_GALL_ADV_CONFIG_FILE_DESC","Put the config file to include and use.");
 define("LANG_GALL_ADV_SELECT_PATH","Put the path that you want the generated code in. Make sure that apache has permission to write to it.");
 define("LANG_GALL_ADV_CHOOSE_MODULES","Please choose the modules that you want to be generated.");
-define("LANG_GALL_ADV_GENERATE_BUTTON","Generate and Save All Code");
+define("LANG_GALL_ADV_GENERATE_BUTTON","Generate and save all code");
 
 
 // USER PLUGINS
@@ -353,8 +353,8 @@ define("LANG_UPLUGINS_NO_PLUGINS_FOUND","No Plugins Found");
 
 define("LANG_INTERNALS_CONNECTION_SUCCESSFUL","connection to database successful..");
 define("LANG_INTERNALS_CONNECTION_ERROR","<font color=red><b>Connection Error</b></font> <br><br> Could not connect to the database with the information provided.<br><br>");
-define("LANG_INTERNALS_DB_ERROR_ON_QUERY","A Database Error Occured while executing Query ");
-define("LANG_INTERNALS_DB_ERROR_ON_COUNT_QUERY","A Database Error Occured while counting result Rows ");
+define("LANG_INTERNALS_DB_ERROR_ON_QUERY","A Database Error occured while executing Query ");
+define("LANG_INTERNALS_DB_ERROR_ON_COUNT_QUERY","A database error occured while counting result rows ");
 
 define("LANG_INTERNALS_ERROR_OCCURED_IN","Error has occured in  ");
 define("LANG_INTERNALS_ERROR_PAGE","Error Page ");
