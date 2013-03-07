@@ -5,15 +5,12 @@ include_once(INC_SUPERHEADER);
 ?>
 <DIV ALIGN=center>
 
-<IMG SRC="<? echo URL_IMAGE_FOLDER."/GIP.png"; ?>" BORDER="0">
 
-<H1><? echo LANG_LOGIN_INVOKE_GENIE; ?></H1>
-
-<FORM NAME="rubGenie" METHOD="post" ACTION="<? echo PAGE_INVOKE_GENIE; ?>">
+<FORM NAME="rubGenie" METHOD="post" ACTION="<? echo PAGE_INVOKE_GIP; ?>">
     <TABLE WIDTH="600" BORDER="0" CELLSPACING="4" CELLPADDING="4">
   
         <TR>
-            <TD ><DIV ALIGN="right"><? echo LANG_LOGIN_GENIE_FLAVOR; ?> : </DIV></TD>
+            <TD ><DIV ALIGN="right"><? echo LANG_LOGIN_GIP_FLAVOR; ?> : </DIV></TD>
             <TD ><SELECT NAME="databaseType">
                     <OPTION VALUE="mysql" SELECTED>MySQL</OPTION>
                     <OPTION VALUE="postgres">PostgreSQL</OPTION>
@@ -48,9 +45,8 @@ include_once(INC_SUPERHEADER);
         <TR>
             <TD COLSPAN="2">
                 <DIV ALIGN="center">
-                     <INPUT NAME="imageField" TYPE="image" SRC="<? echo URL_IMAGE_FOLDER; ?>/startgip.jpg"  BORDER="0" ALT="<? echo LANG_LOGIN_RUB_LAMP_DESC; ?>" onClick="form.submit()">
+                     <INPUT NAME="imageField" TYPE="image" SRC="<? echo URL_IMAGE_FOLDER; ?>/GIP.png"  BORDER="0" ALT="<? echo LANG_LOGIN_RUB_LAMP_DESC; ?>" onClick="form.submit()">
                      <BR><BR>
-                         <H3><? echo LANG_LOGIN_RUB_LAMP; ?></H3>
                      
                   </DIV>
                   
